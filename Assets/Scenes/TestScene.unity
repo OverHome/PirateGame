@@ -157,6 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TakeItem: 0
+  MainCamera: {fileID: 519420031}
+  TagName: {fileID: 2062255413}
 --- !u!50 &19956128
 Rigidbody2D:
   serializedVersion: 4
@@ -216,7 +218,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.004327774, y: 0.008656025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -227,7 +229,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 0.79683113, y: 1.7749467}
   m_EdgeRadius: 0
 --- !u!212 &19956130
 SpriteRenderer:
@@ -270,7 +272,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0c4f8302c651f2042a652d2712208738, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 933c78500843e2447884bac7cd339cb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -991,7 +993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.36, y: 1.75}
+  m_AnchoredPosition: {x: 8.9, y: 5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519420033
@@ -1062,7 +1064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49020731c302cb2c8fc418cb2ad5f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 19956126}
 --- !u!1 &648103174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,6 +2541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c32f8e8e29ac342baca78630d47bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 519420031}
 --- !u!114 &2062255411
 MonoBehaviour:
   m_ObjectHideFlags: 0
