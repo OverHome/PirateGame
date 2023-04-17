@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogue name="Example">
+    <node id="0" npcText="Привет!">
+        <answer text="Привет." toNode="1" />
+        <answer text="Мне пора." exit="True" />
+    </node>
+    <node id="1" npcText="Как дела?">
+        <answer text="Нормально." exit="True" />
+    </node>
+</dialogue>
