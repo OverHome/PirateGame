@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 933c78500843e2447884bac7cd339cb2
+guid: 9d37b84f2f8807641877a3134c958405
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,9 +37,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Captain_0
+      name: Captain_walk_0
       rect:
         serializedVersion: 2
         x: 10
@@ -145,8 +145,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 128ff90158b7f9a4eabc2f2f6017e839
-      internalID: -1145398040
+      spriteID: 4178874aae5133c489182f108f5e0bbb
+      internalID: 2067433678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Captain_walk_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2
+        width: 12
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5d4abcac7ae3a419c713c0e639da8c
+      internalID: 344111155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Captain_walk_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 12
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae185e494a7e5341b35477d0bb83b86
+      internalID: 1518637808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Captain_walk_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 2
+        width: 12
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef47c7bb1a4e6584b8bfc91542585937
+      internalID: 804819572
       vertices: []
       indices: 
       edges: []
@@ -162,7 +225,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Captain_0: -1145398040
+      Captain_walk_0: 2067433678
+      Captain_walk_1: 344111155
+      Captain_walk_2: 1518637808
+      Captain_walk_3: 804819572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

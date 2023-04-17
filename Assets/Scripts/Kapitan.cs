@@ -6,28 +6,34 @@ public class Kapitan : MonoBehaviour
 {
     private Vector2 targetPosition;
     private bool toRight;
-    public bool TakeItem;
+    public String TakeItem;
     private Inventory _inventory;
     public Camera MainCamera;
     public Canvas TagName;
+
+    private Animator anim;
     void Start()
     {
-        _inventory = gameObject.GetComponent<Inventory>();
+        _inventory = GetComponent<Inventory>();
+        anim = GetComponent<Animator>();
         targetPosition = new Vector2(transform.position.x, transform.position.y);
-        TakeItem = false;
+        TakeItem = "";
     }
         
     void Update() {
-        if(!TakeItem && Input.GetKeyDown(KeyCode.Mouse0))
+        if(TakeItem=="" && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Vector2 getMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPosition = getMousePosition;
-            toRight = targetPosition.x > transform.position.x;
-            transform.localRotation = Quaternion.Euler(0, 180 * (toRight ? 0 : 1), 0);
-            
+            if (getMousePosition.y < 8.5f)
+            {
+                targetPosition = getMousePosition;
+                toRight = targetPosition.x > transform.position.x;
+                transform.localRotation = Quaternion.Euler(0, 180 * (toRight ? 0 : 1), 0);
+            }
         }
-        MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, new Vector3(targetPosition.x,MainCamera.transform.position.y, MainCamera.transform.position.z), Time.deltaTime * 2);
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetPosition.x, transform.position.y), Time.deltaTime * 3);
+        anim.SetFloat("MoveX", Math.Abs(transform.position.x - targetPosition.x));
+        MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, new Vector3(targetPosition.x,MainCamera.transform.position.y, MainCamera.transform.position.z), Time.deltaTime * 2.5f);
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetPosition.x, transform.position.y), Time.deltaTime * 2.5f);
     }
     
 
@@ -41,24 +47,31 @@ public class Kapitan : MonoBehaviour
         }
     }
 
-    public void SetTakeItem()
+    public void SetTakeItem(CollecteblItem item)
     {
-        TakeItem = true;
+        TakeItem = item.name;
     }
     
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "item")
         {
-            Item item = other.GetComponent<CollecteblItem>().item;
-            if (TakeItem)
+            CollecteblItem item = other.GetComponent<CollecteblItem>();
+            if (TakeItem==item.name)
             {
-                TagName.gameObject.SetActive(false);
-                TakeItem = false;
-                _inventory.AddItem(item);
-                Destroy(other.gameObject);
+                TakeItem = "";
+                if (_inventory.AddItem(item.item))
+                {
+                    TagName.gameObject.SetActive(false);
+                    Destroy(other.gameObject);    
+                }
             }
         }
             
+    }
+
+    public void t()
+    {
+        print("dsfsfsfs");
     }
 }
