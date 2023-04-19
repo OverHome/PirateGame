@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,9 @@ public class Kapitan : MonoBehaviour
     private Inventory _inventory;
     public Camera MainCamera;
     public Canvas TagName;
+    private bool IsMove;
+    
+    [SerializeField] public float Spead = 2f;
 
     private Animator anim;
     void Start()
@@ -21,10 +25,19 @@ public class Kapitan : MonoBehaviour
     }
         
     void Update() {
-        if(TakeItem=="" && Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+            IsMove = true;
+        if(Input.GetKeyUp(KeyCode.Mouse0))
+            IsMove = false;
+        Move();
+    }
+
+    private void Move()
+    {
+        if(!GameData.PlayerIsBusy && IsMove)
         {
             Vector2 getMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (getMousePosition.y < 8.5f)
+            if (getMousePosition.y < 3.5f && Math.Abs(getMousePosition.x - transform.position.x)>0.1)
             {
                 targetPosition = getMousePosition;
                 toRight = targetPosition.x > transform.position.x;
@@ -32,8 +45,8 @@ public class Kapitan : MonoBehaviour
             }
         }
         anim.SetFloat("MoveX", Math.Abs(transform.position.x - targetPosition.x));
-        MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, new Vector3(targetPosition.x,MainCamera.transform.position.y, MainCamera.transform.position.z), Time.deltaTime * 2.5f);
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetPosition.x, transform.position.y), Time.deltaTime * 2.5f);
+        MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, new Vector3(targetPosition.x,MainCamera.transform.position.y, MainCamera.transform.position.z), Time.deltaTime * Spead);
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetPosition.x, transform.position.y), Time.deltaTime * Spead);
     }
     
 
@@ -49,7 +62,11 @@ public class Kapitan : MonoBehaviour
 
     public void SetTakeItem(CollecteblItem item)
     {
-        TakeItem = item.name;
+        if (!GameData.PlayerIsBusy)
+        {
+            TakeItem = item.name;
+            GameData.PlayerIsBusy = true; 
+        }
     }
     
     private void OnTriggerStay2D(Collider2D other)
@@ -60,7 +77,8 @@ public class Kapitan : MonoBehaviour
             if (TakeItem==item.name)
             {
                 TakeItem = "";
-                if (_inventory.AddItem(item.item))
+                GameData.PlayerIsBusy = false;
+                if (_inventory.AddItem(item))
                 {
                     TagName.gameObject.SetActive(false);
                     Destroy(other.gameObject);    
@@ -68,10 +86,5 @@ public class Kapitan : MonoBehaviour
             }
         }
             
-    }
-
-    public void t()
-    {
-        print("dsfsfsfs");
     }
 }

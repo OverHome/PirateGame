@@ -1,17 +1,14 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class CollecteblItem : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
-    [SerializeField] public Item item;
+    [SerializeField] public string ItemName;
+    [SerializeField] public Sprite Icon;
+    [SerializeField] public int ItemId;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = item.Icon;
-        item.IsTack = false;
+        GetComponent<SpriteRenderer>().sprite = Icon;
     }
-    
 }
