@@ -1,0 +1,8 @@
+<dialogue>
+    <node>
+        <npctext> Чего тебе, юноша? Больше у меня никаких секретов нет! </npctext>
+        <answers>
+            <answer tonode="0"> <text> Бывай. </text> <dialend>true</dialend> </answer>
+        </answers>
+    </node>
+</dialogue>

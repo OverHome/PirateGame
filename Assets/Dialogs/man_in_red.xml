@@ -1,0 +1,47 @@
+<dialogue>
+    <node>
+        <npctext> Здарова! Не можешь подсобить мне в одном личном деле? За плату разумеется. </npctext>
+        <answers>
+            <answer tonode="1"> <text> Чего ты хочешь? </text></answer>
+			<answer tonode="2"> <text> Не интересует. </text></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+		<npctext> Тут такое дело... Видишь того старика у маяка?\nЭтот старик всем дает понюхать что-то в своей кружке, а мне не дает!\nДаже другие жители острова не говорят мне, что там!\n Короче, скажи мне что в кружке, а я тебе заплачу, идет? </npctext>
+        <answers>
+		<answer tonode="3"> <text> Ладно, там внутри... </text>
+		<answer tonode="2"> <text> Нет, он попросил меня не рассказывать. </text>
+        </answers>
+	</node>
+	<node> <!-- 2 -->
+		<npctext> Тысяча чертей! Ну и иди тогда дальше, не мазоль глаза!</npctext>
+        <answers>
+		<answer tonode="0"> <text> *уйти* </text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node> <!-- 3 -->
+		<npctext> Ну же! Не томи! Говори быстрее!</npctext>
+        <answers>
+		<answer tonode="4"> <text> Там внутри... </text></answer>
+        </answers>
+	</node>
+	<node> <!-- 4 -->
+		<npctext> АААААААААААА! Быстрее!</npctext>
+        <answers>
+		<answer tonode="5"> <text>  Внутри находится обычный табак. </text></answer>
+		<answer tonode="6"> <text>  Внутри находятся гнилые водоросли. </text></answer>
+        </answers>
+	</node>
+	<node> <!-- 5 -->
+		<npctext> Серьезно? Обычный табак? Ты ничего интереснее не смог придумать?\nИди отсюда, за такую отровенную ложь платить не стану!</npctext>
+        <answers>
+		<answer tonode="0"> <text>  Ну как знаешь, бывай. </text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node> <!-- 6 -->
+		<npctext> Водоросли! Ну конечно! Так и знал, что он что-то скрывает!\nНаверняка это водоросли обладают какими-то особоыми свойствами\nЯ должен узнать что там за водоросли...</npctext>
+        <answers>
+		<answer tonode="0"> <text>  Ну как знаешь, бывай. </text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+</dialogue>

@@ -1,0 +1,27 @@
+<dialogue>
+    <node>
+        <npctext> *храпит* </npctext>
+        <answers>
+            <answer tonode="1"> <text> Эй! </text></answer>
+			<answer tonode="0"> <text> *уйти* </text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext> *недовольно храпит* </npctext>
+        <answers>
+            <answer tonode="2"> <text> Алё! Подъём! </text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext> *очень недовольно храпит* </npctext>
+        <answers>
+            <answer tonode="3"> <text> Чтож, думаю корабль сможет поплыть и без него... </text></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext> А! Что?! Нет, как же без меня? </npctext>
+        <answers>
+            <answer tonode="0"> <text> ... </text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

@@ -1,0 +1,8 @@
+<dialogue>
+    <node>
+        <npctext> ~Во тьме ночной, при свете дня...\n все не идет рифма у меня!</npctext>
+        <answers>
+            <answer tonode="0"> <text> ... </text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+</dialogue>

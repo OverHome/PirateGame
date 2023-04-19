@@ -1,0 +1,20 @@
+<dialogue>
+    <node>
+        <npctext> Простите, сэр! Ой, голова болит... </npctext>
+        <answers>
+            <answer tonode="1"> <text> Как ты оказался здесь? </text></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext> Видите ли, я был так счастлив,\nчто вы наняли нашу команду, что позволил себе выпить.\nВсего один стаканчик Рома, честное слово... </npctext>
+        <answers>
+            <answer tonode="2"> <text> Да уж! Ладно, ты случайно не знаешь где Зорро? </text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext> Знаю! Он был рядом, когда я решил прилечь у пальмы.\nОн говорил что-то про поиски вдохновения.\nМожет он на верху? </npctext>
+        <answers>
+            <answer tonode="0"> <text> Отправляйся на корабль. </text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

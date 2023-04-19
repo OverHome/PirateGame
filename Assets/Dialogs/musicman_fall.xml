@@ -1,0 +1,28 @@
+<dialogue>
+    <node>
+        <npctext> За что вы так со мной, капитан?! Я же почти...\n Эх, бескультурный вы человек... Что вам от меня надо? </npctext>
+        <answers>
+            <answer tonode="1"> <text> Ты нужен на корабле. </text></answer>
+			<answer tonode="3"> <text> Мы из-за тебя отплыть не можем, творческая, блин, натура! </text></answer>
+        </answers>
+	</node>
+	<node> <!-- 1 -->
+        <npctext> Корабль... Корабль... А ну да! Там же меня ждет моя!.. Эээ... Муза!\nДа, конечно, муза. Уже бегу капитан. </npctext>
+        <answers>
+            <answer tonode="0"> <text> Вот и отлично </text><dialend>true<dialend></answer>
+			<answer tonode="2"> <text> Чего? Какая муза! Говори нормально! </text></answer>
+        </answers>
+	</node>
+	<node> <!-- 2 -->
+        <npctext> Хи-хи... Это же муза, мое вдохновение! Моя пища! </npctext>
+        <answers>
+            <answer tonode="0"> <text> Иди уже. </text><dialend>true<dialend></answer>
+        </answers>
+	</node>
+	<node> <!-- 3 -->
+        <npctext> Отплыть... А ну да! Я же музыкант на лучшем фрегате в этих морях!\nУже бегу, ваше пресветейшество. </npctext>
+        <answers>
+            <answer tonode="0"> <text> Иди уже, лодырь. </text><dialend>true<dialend></answer>
+        </answers>
+	</node>
+</dialogue>

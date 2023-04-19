@@ -1,0 +1,8 @@
+<dialogue>
+    <node>
+        <npctext> До тебя мне сейчас нет дела! </npctext>
+        <answers>
+            <answer tonode="0"> <text> Бывай. </text> <dialend>true</dialend> </answer>
+        </answers>
+    </node>
+</dialogue>
