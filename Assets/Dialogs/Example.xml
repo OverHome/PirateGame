@@ -1,0 +1,21 @@
+﻿<dialogue>
+    <node>
+        <npctext> Привет, сталкер </npctext>
+        <answers>
+            <answer tonode = "1"> <text> У тебя есть еда для обмена? Я умираю с голоду! </text> </answer>
+            <answer tonode = "2"> <text> Ты не знаешь, где здесь можно добыть чего нибудь съестного? </text> </answer>
+        </answers>
+    </node>
+    <node>
+        <npctext> У меня ничего нет. </npctext>
+        <answers>
+            <answer tonode = "2"> <text> Ты не знаешь, где здесь можно добыть чего нибудь съестного? </text> </answer>
+        </answers>
+    </node>
+    <node>
+        <npctext> Поищи вещи по лаборатории, люди покидали это место в спешке, может и обранили чего? </npctext>
+        <answers>
+            <answer tonode="0"> <text> Хорошо, поищу. Спасибо! </text> <dialend>true</dialend> </answer>
+        </answers>
+    </node>
+</dialogue>
