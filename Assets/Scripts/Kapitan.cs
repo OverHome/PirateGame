@@ -21,6 +21,7 @@ public class Kapitan : MonoBehaviour
     private Animator anim;
     void Start()
     {
+        
         _inventory = GetComponent<Inventory>();
         anim = GetComponent<Animator>();
         targetPosition = new Vector2(transform.position.x, transform.position.y);
