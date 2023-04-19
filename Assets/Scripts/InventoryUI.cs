@@ -35,9 +35,10 @@ public class InventoryUI : MonoBehaviour
 
     public void Select(int numberOfCount)
     {
-        GameData.PlayerIsBusy = false;
-        foreach (var slot in _inventoryUISlot)
+        int selectItem = -1;
+        for (int i = 0; i < _inventoryUISlot.Count; i++)
         {
+            InventoryUISlot slot = _inventoryUISlot[i];
             if (slot.NumberOfCount == numberOfCount && slot.NumberOfCount < _inventory.Items.Count)
             {
                 if (slot.IsSelected)
@@ -47,7 +48,8 @@ public class InventoryUI : MonoBehaviour
                 else
                 {
                     slot.Select();
-                    GameData.PlayerIsBusy = true;
+                    selectItem = i;
+                    
                 }
             }
             else
@@ -55,5 +57,6 @@ public class InventoryUI : MonoBehaviour
                 slot.UnSelect();
             }
         }
+        _inventory.SetSelectedItem(selectItem);
     }
 }

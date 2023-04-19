@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -8,7 +9,16 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] public List<CollecteblItem> Items = new();
     [SerializeField] public UnityEvent OnInventoryChange;
+    [SerializeField] public InventoryUI InventoryUI;
     [SerializeField] public int Size = 4;
+    private Kapitan _kapitan;
+    public int SelectedItem;
+
+    private void Start()
+    {
+        _kapitan = GetComponent<Kapitan>();
+        SelectedItem = -1;
+    }
 
     public bool AddItem(CollecteblItem item)
     {
@@ -16,5 +26,36 @@ public class Inventory : MonoBehaviour
         Items.Add(item);
         OnInventoryChange.Invoke();
         return true;
+    }
+
+    public void UseItem(int expectedItem, Vector2 position)
+    {
+        if (expectedItem == Items[SelectedItem].ItemId)
+        {
+            _kapitan.SetUseItem(position);
+        }
+        else
+        {
+            UnSelect();
+        }
+    }
+
+    public void DelUsedItem()
+    {
+        Items.RemoveAt(SelectedItem);
+        UnSelect();
+        OnInventoryChange.Invoke();
+    }
+
+    public void UnSelect()
+    {
+        GameData.PlayerIsBusy = false;
+        InventoryUI.Select(SelectedItem);
+    }
+
+    public void SetSelectedItem(int index)
+    {
+        if (index != -1)  GameData.PlayerIsBusy = true;
+        SelectedItem = index;
     }
 }

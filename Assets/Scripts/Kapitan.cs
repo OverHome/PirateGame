@@ -12,6 +12,7 @@ public class Kapitan : MonoBehaviour
     public Camera MainCamera;
     public Canvas TagName;
     private bool IsMove;
+    private bool IsUseItem;
     
     [SerializeField] public float Spead = 2f;
 
@@ -22,6 +23,7 @@ public class Kapitan : MonoBehaviour
         anim = GetComponent<Animator>();
         targetPosition = new Vector2(transform.position.x, transform.position.y);
         TakeItem = "";
+        IsUseItem = false;
     }
         
     void Update() {
@@ -30,6 +32,8 @@ public class Kapitan : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Mouse0))
             IsMove = false;
         Move();
+        if (IsUseItem) UseItem();
+        print(GameData.PlayerIsBusy);
     }
 
     private void Move()
@@ -47,6 +51,22 @@ public class Kapitan : MonoBehaviour
         anim.SetFloat("MoveX", Math.Abs(transform.position.x - targetPosition.x));
         MainCamera.transform.position = Vector3.MoveTowards(MainCamera.transform.position, new Vector3(targetPosition.x,MainCamera.transform.position.y, MainCamera.transform.position.z), Time.deltaTime * Spead);
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(targetPosition.x, transform.position.y), Time.deltaTime * Spead);
+    }
+
+    public void UseItem()
+    {
+        if (targetPosition.x == transform.position.x)
+        {
+            _inventory.DelUsedItem();
+            IsUseItem = false;
+            GameData.PlayerIsBusy = false;
+        }
+    }
+
+    public void SetUseItem(Vector2 vector2)
+    {
+        targetPosition = vector2;
+        IsUseItem = true;
     }
     
 

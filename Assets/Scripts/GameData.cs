@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.VisualScripting;
+using UnityEngine;
 
-public static class GameData
+public class GameData : MonoBehaviour
 {
     public static bool PlayerIsBusy = false;
 }

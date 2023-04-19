@@ -329,7 +329,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  InventoryUI: {fileID: 1754095277}
   Size: 4
+  SelectedItem: 0
 --- !u!95 &19956133
 Animator:
   serializedVersion: 5
@@ -1869,7 +1871,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34164fe25d9912e4cae22ec781b8b0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpectedItem: 0
+  ExpectedItem: 2
+  Inventory: {fileID: 19956132}
+  GameObjectPosition: {fileID: 995960244}
+  Position: {x: 0, y: 0}
 --- !u!212 &995960247
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1910,7 +1915,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
