@@ -49,13 +49,20 @@ public class Inventory : MonoBehaviour
 
     public void UnSelect()
     {
-        GameData.PlayerIsBusy = false;
+        _kapitan.ItemSelected = false;
         InventoryUI.Select(SelectedItem);
     }
 
     public void SetSelectedItem(int index)
     {
-        if (index != -1)  GameData.PlayerIsBusy = true;
+        if (index != -1)
+        {
+            _kapitan.PlayerIsBusy = true;
+        }
+        else
+        {
+            _kapitan.PlayerIsBusy = false;
+        }
         SelectedItem = index;
     }
 }

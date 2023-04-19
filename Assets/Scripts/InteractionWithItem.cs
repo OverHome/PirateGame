@@ -9,7 +9,7 @@ public class InteractionWithItem : MonoBehaviour, IPointerClickHandler
     [SerializeField] public int ExpectedItem;
     [SerializeField] public Inventory Inventory;
     [SerializeField] public GameObject GameObjectPosition = null;
-    [SerializeField] public Vector2 Position;
+    private Vector2 Position;
 
     private void Start()
     {
@@ -18,6 +18,7 @@ public class InteractionWithItem : MonoBehaviour, IPointerClickHandler
     
     public void OnPointerClick(PointerEventData eventData)
     {
+        print("fsdfsfs");
         if (Inventory.SelectedItem != -1)
         {
             Inventory.UseItem(ExpectedItem, Position);

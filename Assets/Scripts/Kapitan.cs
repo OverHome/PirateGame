@@ -13,6 +13,8 @@ public class Kapitan : MonoBehaviour
     public Canvas TagName;
     private bool IsMove;
     private bool IsUseItem;
+    public bool PlayerIsBusy;
+    public bool ItemSelected;
     
     [SerializeField] public float Spead = 2f;
 
@@ -24,23 +26,38 @@ public class Kapitan : MonoBehaviour
         targetPosition = new Vector2(transform.position.x, transform.position.y);
         TakeItem = "";
         IsUseItem = false;
+        ItemSelected = false;
     }
         
     void Update() {
+        Vector2 getMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if(Input.GetKeyDown(KeyCode.Mouse0))
             IsMove = true;
-        if(Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
             IsMove = false;
-        Move();
+            if (_inventory.SelectedItem != -1 && ItemSelected && !IsUseItem)
+            {
+                ItemSelected = false;
+                _inventory.UnSelect();
+            }
+            if (_inventory.SelectedItem == -1) ItemSelected = false;
+
+            if (getMousePosition.y > 3.5f && _inventory.SelectedItem != -1)
+            {
+                ItemSelected = true;
+            }
+            
+        }
+            
+        Move(getMousePosition);
         if (IsUseItem) UseItem();
-        print(GameData.PlayerIsBusy);
     }
 
-    private void Move()
+    private void Move(Vector2 getMousePosition)
     {
-        if(!GameData.PlayerIsBusy && IsMove)
+        if(!PlayerIsBusy && IsMove)
         {
-            Vector2 getMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (getMousePosition.y < 3.5f && Math.Abs(getMousePosition.x - transform.position.x)>0.1)
             {
                 targetPosition = getMousePosition;
@@ -59,7 +76,7 @@ public class Kapitan : MonoBehaviour
         {
             _inventory.DelUsedItem();
             IsUseItem = false;
-            GameData.PlayerIsBusy = false;
+            PlayerIsBusy = false;
         }
     }
 
@@ -82,10 +99,10 @@ public class Kapitan : MonoBehaviour
 
     public void SetTakeItem(CollecteblItem item)
     {
-        if (!GameData.PlayerIsBusy)
+        if (!PlayerIsBusy)
         {
             TakeItem = item.name;
-            GameData.PlayerIsBusy = true; 
+            PlayerIsBusy = true; 
         }
     }
     
@@ -97,7 +114,7 @@ public class Kapitan : MonoBehaviour
             if (TakeItem==item.name)
             {
                 TakeItem = "";
-                GameData.PlayerIsBusy = false;
+                PlayerIsBusy = false;
                 if (_inventory.AddItem(item))
                 {
                     TagName.gameObject.SetActive(false);
