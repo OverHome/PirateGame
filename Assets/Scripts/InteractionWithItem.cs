@@ -18,7 +18,6 @@ public class InteractionWithItem : MonoBehaviour, IPointerClickHandler
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        print("fsdfsfs");
         if (Inventory.SelectedItem != -1)
         {
             Inventory.UseItem(ExpectedItem, Position);

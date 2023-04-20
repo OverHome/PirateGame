@@ -11,11 +11,13 @@ public class Inventory : MonoBehaviour
     [SerializeField] public UnityEvent OnInventoryChange;
     [SerializeField] public InventoryUI InventoryUI;
     [SerializeField] public int Size = 4;
+    private Canvas _canvas;
     private Kapitan _kapitan;
     public int SelectedItem;
 
     private void Start()
     {
+        _canvas = InventoryUI.GetComponentInParent<Canvas>();
         _kapitan = GetComponent<Kapitan>();
         SelectedItem = -1;
     }
@@ -64,5 +66,15 @@ public class Inventory : MonoBehaviour
             _kapitan.PlayerIsBusy = false;
         }
         SelectedItem = index;
+    }
+
+    public void Hide()
+    { 
+        _canvas.gameObject.SetActive(false);
+    }
+    
+    public void Show()
+    {
+        _canvas.gameObject.SetActive(true);
     }
 }
