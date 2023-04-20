@@ -94,12 +94,12 @@ public class Kapitan : MonoBehaviour
         PlayerIsBusy = true;
     }
     
-    public void StartDialog(Sprite avatar, string name, List<TextAsset> Dialogs)
+    public void StartDialog(Sprite avatar, string name, string tagName, List<TextAsset> dialogs)
     {
         targetPosition = gameObject.transform.position;
         _inventory.Hide();
         TextDialog.Show();
-        TextDialog.GetStart(avatar, name, Dialogs);
+        TextDialog.GetStart(avatar, name, tagName, dialogs);
     }
     
     public void EndDialog()

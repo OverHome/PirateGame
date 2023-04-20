@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,24 +29,25 @@ public class TextDialog : MonoBehaviour
         Hide();
     }
 
-    public void GetStart(Sprite avatar, string name, List<TextAsset> data)
+    public void GetStart(Sprite avatar, string name, string tagTame, List<TextAsset> data)
     {
         NodeIndex = 0;
         Avatar.sprite = avatar;
         Name.text = name;
         Text.text = "";
         Data = data;
-        _dialogue = Dialogue.Load(Data[PlayerPrefs.GetInt(name)]);
+        _dialogue = Dialogue.Load(Data[PlayerPrefs.GetInt(tagTame)]);
         SetNode();
     }
 
     public void SetNode()
     {
-        Text.text = _dialogue.nodes[NodeIndex].Npctext;
-        Answer1Text.text = _dialogue.nodes[NodeIndex].answers[0].text.Replace("\\n", "\n");;
-        if (_dialogue.nodes[NodeIndex].answers.Length == 2)
+        Text.text = _dialogue.nodes[NodeIndex].Npctext.Replace("\\n", "\n");
+        int[] answers = GetAnswers().ToArray();
+        Answer1Text.text = _dialogue.nodes[NodeIndex].answers[answers[0]].text;
+        if (answers.Length >= 2)
         {
-            Answer2Text.text = _dialogue.nodes[NodeIndex].answers[1].text;
+            Answer2Text.text = _dialogue.nodes[NodeIndex].answers[answers[1]].text;
             Answer2.gameObject.SetActive(true);
         }
         else
@@ -54,11 +56,41 @@ public class TextDialog : MonoBehaviour
         }
     }
 
+    public List<int> GetAnswers()
+    {
+        List<int> answers = new();
+        for (int i = 0; i < _dialogue.nodes[NodeIndex].answers.Length; i++)
+        {
+            Answer answer = _dialogue.nodes[NodeIndex].answers[i];
+            bool isAccess = true;
+            foreach (var param in answer.need.EmptyIfNull())
+            {
+                if (PlayerPrefs.GetInt(param.param, 0) != param.value)
+                {
+                    isAccess = false;
+                    break;
+                }
+                
+            }
+
+            if (isAccess)
+            {
+                answers.Add(i);
+            }
+        }
+
+        return answers;
+    }
+
     public void SelectAnswer(int answer)
     {
+        foreach (var param in _dialogue.nodes[NodeIndex].answers[answer].set.EmptyIfNull())
+        {
+            PlayerPrefs.SetInt(param.param, param.value);
+        }
+        
         if (_dialogue.nodes[NodeIndex].answers[answer].end == "true")
         {
-            PlayerPrefs.SetInt(Name.text, _dialogue.nodes[NodeIndex].answers[answer].personalCount);
             _kapitan.EndDialog();
         }
         else
@@ -77,4 +109,9 @@ public class TextDialog : MonoBehaviour
     {
         _canvas.gameObject.SetActive(true);
     }
+}
+
+public static class EnumerableExtensions {
+    public static IEnumerable<T> EmptyIfNull<T>(this IEnumerable<T> source) =>
+        source != null ? source : Enumerable.Empty<T>();
 }

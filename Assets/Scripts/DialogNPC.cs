@@ -12,6 +12,7 @@ public class DialogNPC : MonoBehaviour, IPointerClickHandler
 
     [SerializeField] public List<TextAsset> Dialogs;
     [SerializeField] public string Name;
+    [SerializeField] public string TagName;
     public Sprite Avatar;
 
     private void Start()
@@ -35,7 +36,7 @@ public class DialogNPC : MonoBehaviour, IPointerClickHandler
     {
         if (_wait)
         {
-            _kapitan.StartDialog(Avatar, Name, Dialogs);
+            _kapitan.StartDialog(Avatar, Name, TagName, Dialogs);
             _wait = false;
         }
         

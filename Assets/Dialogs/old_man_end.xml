@@ -3,6 +3,13 @@
         <npctext> Чего тебе, юноша? Больше у меня никаких секретов нет! </npctext>
         <answers>
             <answer tonode="0"> <text> Бывай. </text> <dialend>true</dialend> </answer>
+            <answer tonode="1"> <text>Но ты ничего не рассказал. </text> <need><param v="1">NoTabak</param></need> </answer>
+        </answers>
+    </node>
+    <node>
+        <npctext> А все, надо было раньше итересоваться. </npctext>
+        <answers>
+            <answer tonode="0"> <text>... </text> <dialend>true</dialend> </answer>
         </answers>
     </node>
 </dialogue>

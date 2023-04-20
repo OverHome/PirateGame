@@ -38,11 +38,24 @@ public class Answer
 {
     [XmlAttribute("tonode")]
     public int nextNode;
-    [XmlAttribute("personalCount")]
-    public int personalCount;
     [XmlElement("text")]
     public string text;
     [XmlElement("dialend")]
     public string end;
+    [XmlArray("set")]
+    [XmlArrayItem("param")]
+    public Param[] set;
+    [XmlArray("need")]
+    [XmlArrayItem("param")]
+    public Param[] need;
 
+}
+
+public class Param
+{
+    [XmlText]
+    public string param;
+    
+    [XmlAttribute("v")]
+    public int value;
 }
