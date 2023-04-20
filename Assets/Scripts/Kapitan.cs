@@ -88,7 +88,7 @@ public class Kapitan : MonoBehaviour
         IsUseItem = true;
     }
     
-    public void SetMoveToNPC(Vector2 vector2)
+    public void SetMoveTo(Vector2 vector2)
     {
         targetPosition = vector2;
         PlayerIsBusy = true;
