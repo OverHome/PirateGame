@@ -1,0 +1,14 @@
+<dialogue>
+    <node>
+        <npctext>Ай. Возмутительно. Как какой-то плебей посмел бросить в меня. А, это вы капитан... </npctext>
+        <answers>
+            <answer tonode = "1"> <text> Да, я. Спускайся давай. </text> </answer>
+        </answers>
+    </node>
+    <node>
+        <npctext>Прошу простить мою грубость. Но вынужден сообщить, что моя муза покинула меня, а по сему\nЯ буду ждать ее возвращения здесь, средь ветров и ласкового солнца... </npctext>
+		<answers>
+            <answer tonode="0"> <text>Надо бы найти, что в тебя кинуть... </text> <dialend>true</dialend> </answer>
+        </answers>
+    </node>
+</dialogue>
