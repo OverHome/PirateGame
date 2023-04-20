@@ -21,7 +21,7 @@
 	<node> <!-- 3 -->
         <npctext> А! Что?! Нет, как же без меня? </npctext>
         <answers>
-            <answer tonode="0"> <text> ... </text><dialend>true</dialend></answer>
+            <answer tonode="0"> <text> ... </text><set><param v="1">Shegol</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>

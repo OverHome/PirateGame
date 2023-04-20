@@ -26,7 +26,7 @@
 	<node> <!-- 4 -->
         <npctext>Никак нет, товарищ капитан! Хе-хе.\nЛадно, шутки в сторону. Нам необходимо купить </npctext>
         <answers>
-            <answer tonode="0"> <text> Ладно, в любом случае нужно отплывать. Все готово? </text></answer>
+            <answer tonode="0"> <text> Ладно, в любом случае нужно отплывать. Все готово? </text><dialend>true</dialend></answer>
         </answers>
 	</node>
 	
