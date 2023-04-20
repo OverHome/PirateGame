@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,6 +18,7 @@ public class Kapitan : MonoBehaviour
     public bool ItemSelected;
     
     [SerializeField] public float Spead = 2f;
+    [SerializeField] public TextDialog TextDialog;
 
     private Animator anim;
     void Start()
@@ -84,6 +86,27 @@ public class Kapitan : MonoBehaviour
     {
         targetPosition = vector2;
         IsUseItem = true;
+    }
+    
+    public void SetMoveToNPC(Vector2 vector2)
+    {
+        targetPosition = vector2;
+        PlayerIsBusy = true;
+    }
+    
+    public void StartDialog(Sprite avatar, string name, List<TextAsset> Dialogs)
+    {
+        targetPosition = gameObject.transform.position;
+        _inventory.Hide();
+        TextDialog.Show();
+        TextDialog.GetStart(avatar, name, Dialogs);
+    }
+    
+    public void EndDialog()
+    {
+        _inventory.Show();
+        TextDialog.Hide();
+        PlayerIsBusy = false;
     }
     
 

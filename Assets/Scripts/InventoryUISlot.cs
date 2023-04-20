@@ -32,4 +32,5 @@ public class InventoryUISlot : MonoBehaviour, IPointerDownHandler
     {
         _inventoryUI.Select(NumberOfCount);
     }
+    
 }
