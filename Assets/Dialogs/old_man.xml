@@ -1,27 +1,27 @@
 <dialogue>
     <node>
-        <npctext> Ох-хо-хо, здравствуй, Юноша! Хочешь понюхать из моей кружки? </npctext>
+        <npctext>Ох-хо-хо, здравствуй, Юноша! Хочешь понюхать из моей кружки? </npctext>
         <answers>
-            <answer tonode = "1"> <text> Ну ладно, давай. </text> </answer>
-            <answer tonode = "2"> <text> Ты чё несешь, старый. Отявжись. </text> </answer>
+            <answer tonode = "1"> <text>Ну ладно, давай. </text> </answer>
+            <answer tonode = "2"> <text>Ты чё несешь, старый. Отявжись. </text> </answer>
         </answers>
     </node>
     <node> <!-- 1 -->
-        <npctext> *Дед протягивает вам кружку. Вы наклоняетесь и принюхиваетесь.\n Запах очень сильно напоминает вам табак.* </npctext>  <!-- 1 -->
+        <npctext>*Дед протягивает вам кружку. Вы наклоняетесь и принюхиваетесь.\n Запах очень сильно напоминает вам табак.* </npctext>  <!-- 1 -->
 		<answers>
-            <answer tonode="3"> <text> Это табак? </text></answer>
+            <answer tonode="3"> <text>Это табак? </text></answer>
         </answers>
     </node>
     <node> <!-- 2 -->
-        <npctext> Не хочешь - не надо! Будешь потом как тот тип в красном, на коленях приползешь! </npctext>
+        <npctext>Не хочешь - не надо! Будешь потом как тот тип в красном, на коленях приползешь! </npctext>
         <answers>
-            <answer tonode="0"> <text> Бывай, психованый. </text> <set><param v="1">oldMan1</param><param v="1">NoTabak</param></set> <dialend>true</dialend> </answer>
+            <answer tonode="0"> <text>Бывай, психованый. </text> <set><param v="1">oldMan1</param><param v="1">NoTabak</param></set> <dialend>true</dialend> </answer>
         </answers>
     </node>
 	<node> <!-- 3 --> 
-        <npctext> Да! Теперь ты знаешь мою сокровенную тайну, но НИ В КОЕМ СЛУЧАЕ не говори что в кружке никому.\nЭто секрет нашего острова, даже для других жителей острова. Запомни это! </npctext>
+        <npctext>Да! Теперь ты знаешь мою сокровенную тайну, но НИ В КОЕМ СЛУЧАЕ не говори что в кружке никому.\nЭто секрет нашего острова, даже для других жителей острова. Запомни это! </npctext>
         <answers>
-            <answer tonode="0"> <text> Ладно... </text> <set><param v="1">oldMan1</param></set> <dialend>true</dialend> </answer>
+            <answer tonode="0"> <text>Ладно... </text> <set><param v="1">oldMan1</param></set> <dialend>true</dialend> </answer>
         </answers>
     </node>
 </dialogue>
