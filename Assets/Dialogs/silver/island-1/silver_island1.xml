@@ -33,6 +33,7 @@
         <npctext>Давай лучше я познакомлю тебя с командой! У нас в составе шесть человек включая тебя и меня.</npctext>
         <answers>
             <answer tonode="2"> <text>Хорошая идея, я толком ни с кем не знаком. </text></answer>
+			<answer tonode="16"><text>Я уже знаком с экипажем.</text></answer>
         </answers>
 	</node>
 	<node> <!-- 6 -->
@@ -93,6 +94,12 @@
         <npctext>Корабль конечно поплывет, но его состояние меня немного беспокоит. Денег у нас не много, но если кто-то из местных согласиться нам помочь, было бы совершенно прекрасно</npctext>
         <answers>
             <answer tonode="0"> <text>Уточню, пока, Сильвер! Скоро вернусь</text><set><param v="1">Silver_i1</param></set><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node> <!-- 16 -->
+        <npctext>Ну как знаешь! Будут ли какие-то приказы, мой капитан?</npctext>
+        <answers>
+            <answer tonode="14"> <text>Нужно отправляться в путь, у нас все готово?</text></answer>
         </answers>
 	</node>
 </dialogue>
