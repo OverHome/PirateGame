@@ -16,16 +16,21 @@ public class TextDialog : MonoBehaviour
     [SerializeField] private List<TextAsset> Data;
     [SerializeField] private Button Answer1;
     [SerializeField] private Button Answer2;
+    [SerializeField] private Button Answer3;
     private TextMeshProUGUI Answer1Text;
     private TextMeshProUGUI Answer2Text;
+    private TextMeshProUGUI Answer3Text;
 
     private Dialogue _dialogue;
     private int NodeIndex;
+    private Answer[] _answers;
     private void Start()
     {
         _canvas = GetComponentInParent<Canvas>(true);
         Answer1Text = Answer1.GetComponentInChildren<TextMeshProUGUI>();
         Answer2Text = Answer2.GetComponentInChildren<TextMeshProUGUI>();
+        Answer3Text = Answer2.GetComponentInChildren<TextMeshProUGUI>();
+        _answers = new Answer[3];
         Hide();
     }
 
@@ -45,10 +50,18 @@ public class TextDialog : MonoBehaviour
         Text.text = _dialogue.nodes[NodeIndex].Npctext.Replace("\\n", "\n");
         int[] answers = GetAnswers().ToArray();
         Answer1Text.text = _dialogue.nodes[NodeIndex].answers[answers[0]].text;
+        _answers[0] = _dialogue.nodes[NodeIndex].answers[answers[0]];
         if (answers.Length >= 2)
         {
             Answer2Text.text = _dialogue.nodes[NodeIndex].answers[answers[1]].text;
+            _answers[1] = _dialogue.nodes[NodeIndex].answers[answers[1]];
             Answer2.gameObject.SetActive(true);
+            if (answers.Length >= 3)
+            {
+                Answer3Text.text = _dialogue.nodes[NodeIndex].answers[answers[2]].text;
+                _answers[2] = _dialogue.nodes[NodeIndex].answers[answers[2]];
+                Answer3.gameObject.SetActive(true);
+            }
         }
         else
         {
@@ -82,20 +95,21 @@ public class TextDialog : MonoBehaviour
         return answers;
     }
 
-    public void SelectAnswer(int answer)
+    public void SelectAnswer(int answerIndex)
     {
-        foreach (var param in _dialogue.nodes[NodeIndex].answers[answer].set.EmptyIfNull())
+        var answer = _answers[answerIndex];
+        foreach (var param in answer.set.EmptyIfNull())
         {
             PlayerPrefs.SetInt(param.param, param.value);
         }
         
-        if (_dialogue.nodes[NodeIndex].answers[answer].end == "true")
+        if (answer.end == "true")
         {
             _kapitan.EndDialog();
         }
         else
         {
-            NodeIndex = _dialogue.nodes[NodeIndex].answers[answer].nextNode;
+            NodeIndex = answer.nextNode;
             SetNode();
         }
     }
