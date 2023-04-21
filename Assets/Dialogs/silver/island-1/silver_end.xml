@@ -1,0 +1,21 @@
+<dialogue>
+    <node>
+        <npctext>Вы закончили, капитан?</npctext>
+        <answers>
+			<answer tonode = "2"> <text>Еще нет. </text> </answer>
+            <answer tonode = "1"> <text>Да, два члена экипажа должны были вернуться </text><need><param v="1">i1_find_guys</param></need></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>Чудесно! Поговорите с швартовым на том конце мостика и мы готовы отправляться.</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Хорошо.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Вас понял. Не торопитесь, времени достаточно</npctext>
+        <answers>
+            <answer tonode = "0"> <text>...</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

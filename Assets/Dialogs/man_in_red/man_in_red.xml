@@ -9,14 +9,16 @@
 	<node> <!-- 1 -->
 		<npctext>Тут такое дело... Видишь того старика у маяка? Этот старик всем дает понюхать что-то в своей кружке, а мне не дает! Даже другие жители острова не говорят мне что там! Короче, скажи мне что в кружке, а я тебе заплачу, идет? </npctext>
 		<answers>
-			<answer tonode="3"> <text>Ладно, там внутри... </text></answer>
-			<answer tonode="2"> <text>Нет, он попросил меня не рассказывать. </text></answer>
+			<answer tonode="7"> <text>Я не знаю, что находится внутри </text><need><param v="0">NoTabak</param></need></answer>
+			<answer tonode="7"> <text>Я не знаю, что находится внутри </text><need><param v="2">NoTabak</param></need></answer>
+			<answer tonode="3"> <text>Ладно, там внутри... </text><need><param v="1">NoTabak</param></need></answer>
+			<answer tonode="2"> <text>Нет, он попросил меня не рассказывать. </text><need><param v="1">NoTabak</param></need></answer>
 		</answers>
 	</node>
 	<node> <!-- 2 -->
 		<npctext>Тысяча чертей! Ну и иди тогда дальше, не мазоль глаза!</npctext>
         <answers>
-		<answer tonode="0"> <text>*уйти* </text><set><param v="1">man_in_red</param></set><dialend>true</dialend></answer>
+		<answer tonode="0"> <text>*уйти* </text><set><param v="2">man_in_red</param></set><dialend>true</dialend></answer>
         </answers>
 	</node>
 	<node> <!-- 3 -->
@@ -28,20 +30,26 @@
 	<node> <!-- 4 -->
 		<npctext>АААААААААААА! Быстрее!</npctext>
         <answers>
-		<answer tonode="6"> <text>Внутри находятся гнилые водоросли. </text></answer>
+		<answer tonode="6"> <text>Внутри находятся волосы сирены, пропитанные каким-то водорослями. </text><need><param v="1">NoTabak</param></need></answer>
 		<answer tonode="5"> <text>Внутри находится обычный табак. </text><need><param v="1">NoTabak</param></need></answer>
         </answers>
 	</node>
 	<node> <!-- 5 -->
 		<npctext>Серьезно? Обычный табак? Ты ничего интереснее не смог придумать? Иди отсюда, за такую откровенную ложь платить не стану!</npctext>
         <answers>
-		<answer tonode="0"> <text>Ну как знаешь, бывай. </text><set><param v="1">man_in_red</param></set><dialend>true</dialend></answer>
+		<answer tonode="0"> <text>Ну как знаешь, бывай. </text><set><param v="2">man_in_red</param></set><dialend>true</dialend></answer>
         </answers>
 	</node>
 	<node> <!-- 6 -->
-		<npctext>Водоросли! Ну конечно! Так и знал, что он что-то скрывает! Наверняка это водоросли обладают какими-то особоыми свойствами...\nДержи награду, я должен узнать что там за водоросли...</npctext>
+		<npctext>Водоросли! Ну конечно! Так и знал, что он что-то скрывает! Наверняка это водоросли обладают какими-то особоыми свойствами! Держи награду, я должен узнать что там за водоросли...</npctext>
         <answers>
-		<answer tonode="0"> <text>Ну как знаешь, бывай. </text><set><param v="1">man_in_red</param></set><dialend>true</dialend></answer>
+		<answer tonode="0"> <text>Ну как знаешь, бывай. </text><set><param v="2">man_in_red</param></set><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node> <!-- 7 -->
+		<npctext>Тогда иди и узнай что там у него, черт подери!</npctext>
+        <answers>
+		<answer tonode="0"> <text>Я подумаю, бывай.</text><set><param v="1">man_in_red</param></set><dialend>true</dialend></answer>
         </answers>
 	</node>
 </dialogue>

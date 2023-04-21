@@ -1,0 +1,60 @@
+<dialogue>
+    <node>
+        <npctext>Ну что, узнал что нибудь? </npctext>
+        <answers>
+			<answer tonode="1"> <text>Пока нет. </text><need><param v="0">NoTabak</param></need></answer>
+            <answer tonode="2"> <text>Да, мне удалось узнать что внутри. </text><need><param v="1">NoTabak</param></need></answer>
+            <answer tonode="7"> <text>Нет, он не хочет мне показывать. </text><need><param v="2">NoTabak</param></need></answer>
+        </answers>
+    </node>
+    <node> <!-- 1 -->
+        <npctext>Так иди и узнай, а не валяй тут дурака! </npctext>
+        <answers>
+            <answer tonode="0"> <text>...</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Та-а-ак! И что же там? </npctext>
+        <answers>
+            <answer tonode="3"> <text>В кружке обычный табак.</text></answer>
+			<answer tonode="5"> <text>В кружке какие-то странные водоросли.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext>Табак? Ты ничего лучше придумать не смог? Иди отсюда, вображала! Чтоб мои глаза тебя не видели!</npctext>
+        <answers>
+            <answer tonode="4"> <text>Но это же правда...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>Не хочу от тебя ничего слышать! Пшел вон!</npctext>
+        <answers>
+            <answer tonode="0"> <text>...</text><set><param v="2">man_in_red</param></set><dialend>true</dialend> </answer>
+        </answers>
+    </node>
+	<node> <!-- 5 -->
+        <npctext>Водоросли говоришь... Старик давно себя странно ведёт и всегда смеётся при виде меня... А, я понял!</npctext>
+        <answers>
+            <answer tonode="6"> <text>Что же ты понял?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 6 -->
+        <npctext>Наверняка это какой-то волшебный отвар! Так, держи награду и иди отсюда, мне нужно раскрыть эту тайну!</npctext>
+        <answers>
+            <answer tonode="0"> <text>Как скажешь, бывай.</text><set><param v="2">man_in_red</param></set><dialend>true</dialend> </answer>
+        </answers>
+    </node>
+	<node> <!-- 7 -->
+        <npctext>Ну молодец! Раз этот маразматик упёрся, то уже ничего не сделаешь. Радует, что я хотя бы не один такой, ненюхавший.</npctext>
+        <answers>
+            <answer tonode="8"> <text>А как же награда?</text></answer>
+			<answer tonode="0"> <text>Прощай.</text><set><param v="2">man_in_red</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 8 -->
+        <npctext>За что тебе, прости меня, награда полагается? Ты нифига не сделал.</npctext>
+        <answers>
+            <answer tonode="8"> <text>...</text><set><param v="2">man_in_red</param></set><dialend>true</dialend> </answer>
+        </answers>
+    </node>
+</dialogue>
