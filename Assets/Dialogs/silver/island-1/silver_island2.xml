@@ -1,0 +1,46 @@
+<dialogue>
+    <node>
+        <npctext>Наконец земля! Добро пожаловать на один из моих любимых островов, капитан! Тут всегда царит уникальная атмосфера! </npctext>
+        <answers>
+            <answer tonode = "1"> <text>Спасибо, Сильвер. Есть какие то новости?</text></answer>
+			<answer tonode = "1"> <text>Почему это один из твоих любимых островов?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>Есть. Прошедший шторм не прошел для нас бесследно, даже не смотря на ваше мастерское управление судном! </npctext>
+        <answers>
+            <answer tonode = "2"> <text>За похвалу спасибо, но насколько все серьезно?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Относительно, капитан. Есть пара мелких пробоин и здорово порвало некоторые верёвки. </npctext>
+        <answers>
+            <answer tonode = "3"> <text>Нужно отправить Фрэнка на ремонт, кстати где он?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext>Фрэнк отправился в месте с Джимом на поиски материалов. Тут столько подходящих деревьев? </npctext>
+        <answers>
+            <answer tonode = "4"> <text>И давно они разбежались?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>На самом деле достаточно давно, что бы начать беспокоиться. C Джимом все понятно, но Фрэнк отвественный человек и он уже должен был вернуться. </npctext>
+        <answers>
+            <answer tonode = "4"> <text>Куда конкретно они направились?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 5 -->
+        <npctext>Джим должен был помогать Фрэнку добыть нужные ресуры для восстановления корабля, так что они оба ушли в сторону леса. </npctext>
+        <answers>
+            <answer tonode = "0"> <text>Ясно, отправляюсь за ними</text><set><param v="1">silver_i2</param></set><dialend>true</dialend></answer>
+			<answer tonode = "6"> <text>Есть ли еще что-то, что я должен знать?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 6 -->
+        <npctext>Остров куда более обитаем, чем может показаться, так что будьте бдительны. Я здесь не одну трубку потерял в своих приключениях...</npctext>
+        <answers>
+            <answer tonode = "4"> <text>Если я найду твою трубку - обязательно принесу.</text><set><param v="1">silver_i2</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

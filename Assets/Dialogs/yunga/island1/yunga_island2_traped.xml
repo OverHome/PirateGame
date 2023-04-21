@@ -1,0 +1,41 @@
+<dialogue>
+    <node>
+        <npctext>Э-э-эй! Кто нибудь слыши-и-ит? </npctext>
+        <answers>
+            <answer tonode = "1"> <text>Как ты тут оказался?</text></answer>
+			<answer tonode = "0"> <text>Позже за ним вернусь...</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>К-капитан! Фух, наконец! Я уже боялся, что меня все бросили! </npctext>
+        <answers>
+            <answer tonode = "2"> <text>Никто тебя не бросал, я за тобой и пришел в общем то. Как ты тут оказался?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Я увидел этот храм, когда исследовал остров. Зайдя внутрь, я обнаружил статуэтку на том конце комнаты. Я отправился к ней и пол подо мной провалился...</npctext>
+        <answers>
+            <answer tonode = "3"> <text>То есть подумать прежде, чем сделать слишком круто для тебя?</text></answer>
+			<answer tonode = "4"> <text>У тебя есть идеи как выбраться отсюда?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext>Простите меня, капитан. Мне нет оправданий... </npctext>
+        <answers>
+            <answer tonode = "4"> <text>Запомни это на будущее. Есть идеи как тебе выбраться?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>Раз это ловушка, то выход из неё, наверное, не предусмотрен... Мне нужна лестница или что нибудь в этом духе! </npctext>
+        <answers>
+            <answer tonode = "5"> <text>Лоза здесь слишком мягкая, а свободной веревки нет. Нужно найти нашего плотника, он смог бы сделать лестницу.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 5 -->
+        <npctext>Прекрасная идея, капитан! Только поторопитесь пожалуйста, здесь довольно страшно в одиночестве. Еще и этот скелет... </npctext>
+        <answers>
+            <answer tonode = "0"> <text>Не ной, найдем как тебя вытащить.</text><set><param v="1">yunga_i2</param></set><dialend>true</dialend></answer>
+			<answer tonode = "0"> <text>Я постараюсь найти Фрэнка, держись тут.</text><set><param v="1">yunga_i2</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

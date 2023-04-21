@@ -1,0 +1,8 @@
+<dialogue>
+    <node>
+        <npctext>Бар не работает! Сколько можно повторять?! Пошел вон! </npctext>
+        <answers>
+            <answer tonode="1"> <text>... </text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>
