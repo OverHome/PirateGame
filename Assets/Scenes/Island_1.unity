@@ -4309,6 +4309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogs:
   - {fileID: 4900000, guid: 8ed9049ec1b84911bc07fcdb89d6dbb2, type: 3}
+  - {fileID: 4900000, guid: c346652048d0ffe429c3f2df1d1929b4, type: 3}
+  - {fileID: 4900000, guid: af8e2af6c601d1d439fa7cd6964b7d34, type: 3}
   Name: "\u0428\u0432\u0430\u0440\u0442\u043E\u0432\u043E\u0439"
   TagName: Svartovoi_1
   Avatar: {fileID: 0}
@@ -4646,6 +4648,7 @@ MonoBehaviour:
   Data: []
   Answer1: {fileID: 777520137}
   Answer2: {fileID: 1720405615}
+  Answer3: {fileID: 0}
 --- !u!114 &645653270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5649,10 +5652,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list:
-  - pref: NoTabak
+  - pref: have_rum
     value: 1
-  CleanUp: 1
-  UseList: 0
+  CleanUp: 0
+  UseList: 1
 --- !u!1 &991292410
 GameObject:
   m_ObjectHideFlags: 0
@@ -6535,6 +6538,7 @@ MonoBehaviour:
   Dialogs:
   - {fileID: 4900000, guid: cfb5e8592ddc666488a45baf20365437, type: 3}
   - {fileID: 4900000, guid: 9c65a82fa826c5245866d40a0863ede4, type: 3}
+  - {fileID: 4900000, guid: da245f7cce1e4684fba2ac9aad72c834, type: 3}
   Name: "\u0414\u0435\u0434\u043E\u043A"
   TagName: oldMan1
   Avatar: {fileID: 0}

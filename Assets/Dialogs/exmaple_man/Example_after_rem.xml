@@ -1,0 +1,21 @@
+<dialogue>
+    <node>
+        <npctext>Чего хочешь, бравый капитан? </npctext>
+        <answers>
+            <answer tonode="1"> <text>Я по поводу штурвала, ты его подлатал? </text></answer>
+			<answer tonode="2"> <text>Отплываем.</text></answer>
+        </answers>
+    </node>
+    <node>
+        <npctext>Обижаешь, кэп! На советь подлатал такому доброму человеку. По красоте все сделал.</npctext>
+        <answers>
+            <answer tonode="0"> <text>Ну смотри мне, что случится - с того света достану.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Принято! Залезай на корабль и я вас отшвартую. Удачного пути!</npctext>
+        <answers>
+            <answer tonode="0"> <text>Спасибо, прощай</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

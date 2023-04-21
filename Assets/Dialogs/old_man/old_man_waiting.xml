@@ -1,0 +1,27 @@
+<dialogue>
+    <node>
+        <npctext>Снова здравствуй! Чего пожаловал? </npctext>
+        <answers>
+            <answer tonode="1"> <text>Слушай, дед, а что у тебя в кружке? </text> </answer>
+            <answer tonode="0"> <text>Бывай. </text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <node>
+        <npctext>Так это, а ты понюхай. Вдруг узнаешь запах</npctext>
+        <answers>
+            <answer tonode="2"> <text>Ничего себе ты интригант, ну давай.</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>*Дед протягивает вам кружку. Вы наклоняетесь и принюхиваетесь. Запах очень сильно напоминает вам табак.*</npctext>
+        <answers>
+            <answer tonode="3"> <text>Это табак? Зачем ты табак в кружке то поджег?</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Так а я, внучок, крыс с маяка своего ганяю. Им, вродь как, запах этот очень не нравится. Ты главное это, не говори, что в кружке парню в красном. Мы его уже неделю так стебем.</npctext>
+        <answers>
+            <answer tonode="3"> <text>Веселые у вас забавы. Хорошо, не скажу.</text><set><param v="1">oldMan1</param><param v="1">NoTabak</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

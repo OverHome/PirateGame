@@ -41,15 +41,21 @@
         </answers>
 	</node>
 	<node> <!-- 6 -->
-		<npctext>Водоросли! Ну конечно! Так и знал, что он что-то скрывает! Наверняка это водоросли обладают какими-то особоыми свойствами! Держи награду, я должен узнать что там за водоросли...</npctext>
+		<npctext>Водоросли! Ну конечно! Так и знал, что он что-то скрывает! Наверняка это водоросли обладают какими-то особоыми свойствами! Я должен узнать что там за водоросли...</npctext>
         <answers>
-		<answer tonode="0"> <text>Ну как знаешь, бывай. </text><set><param v="2">man_in_red</param></set><dialend>true</dialend></answer>
+		<answer tonode="8"> <text>Ты про награду то не забывай. </text></answer>
         </answers>
 	</node>
 	<node> <!-- 7 -->
 		<npctext>Тогда иди и узнай что там у него, черт подери!</npctext>
         <answers>
 		<answer tonode="0"> <text>Я подумаю, бывай.</text><set><param v="1">man_in_red</param></set><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node> <!-- 8 -->
+		<npctext>Да-да, я замолвлю словечко перед швартовым. Он тебе корабль чуть подлатает. А теперь кыш! Не мешай мне разгадывать замыслы этого старика...</npctext>
+        <answers>
+		<answer tonode="0"> <text>Ладно, бывай. </text><set><param v="2">man_in_red</param></set><dialend>true</dialend></answer>
         </answers>
 	</node>
 </dialogue>

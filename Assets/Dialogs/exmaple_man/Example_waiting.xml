@@ -1,0 +1,21 @@
+<dialogue>
+    <node>
+        <npctext>Ну что, нашел чего выпить? </npctext>
+        <answers>
+            <answer tonode="1"> <text>Есть такое, бутылочка рома из бара. </text><need><param v="1">have_rum</param></need></answer>
+			<answer tonode="2"> <text>Пока нет.</text></answer>
+        </answers>
+    </node>
+    <node>
+        <npctext>О-о-о! Вот это я понимаю, добрый человек! Подлатаю ваш штурвал, а заодно и время пролетит. Спасибо, кэп!</npctext>
+        <answers>
+            <answer tonode="0"> <text>Смотри главное на совесть все сделал!</text><set><param v="2">Svartovoi_1</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Предложение про штурвал в силе, так что жду чего нибудь выпить.</npctext>
+        <answers>
+            <answer tonode="0"> <text>Да-да, я помню</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

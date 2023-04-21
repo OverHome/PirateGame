@@ -1,27 +1,41 @@
 <dialogue>
     <node>
-        <npctext>Ох-хо-хо, здравствуй, Юноша! Хочешь понюхать из моей кружки? </npctext>
+        <npctext>Ох-хо-хо, здравствуй, юноша! Чего пожаловал на нащ скромный остров? </npctext>
         <answers>
-            <answer tonode = "1"> <text>Ну ладно, давай. </text> </answer>
-            <answer tonode = "2"> <text>Ты чё несешь, старый. Отявжись. </text> </answer>
+            <answer tonode = "4"> <text>Привет, дед. Ищу здесь двоих парней. Они не местные, видел может?</text> </answer>
+            <answer tonode = "2"> <text>Бывай. </text> </answer>
         </answers>
     </node>
     <node> <!-- 1 -->
         <npctext>*Дед протягивает вам кружку. Вы наклоняетесь и принюхиваетесь. Запах очень сильно напоминает вам табак.* </npctext>  <!-- 1 -->
 		<answers>
-            <answer tonode="3"> <text>Это табак? </text></answer>
+            <answer tonode="3"> <text>Это табак? Зачем ты табак в кружке то поджег?</text></answer>
         </answers>
     </node>
     <node> <!-- 2 -->
-        <npctext>Не хочешь - не надо! Будешь потом как тот тип в красном, на коленях приползешь! </npctext>
+        <npctext>Не хочешь - не надо! Будешь потом как тот тип в красном. </npctext>
         <answers>
-            <answer tonode="0"> <text>Бывай, психованый. </text> <set><param v="1">oldMan1</param><param v="2">NoTabak</param></set> <dialend>true</dialend> </answer>
+            <answer tonode="0"> <text>Бывай, старый. </text> <set><param v="1">oldMan1</param><param v="2">NoTabak</param></set> <dialend>true</dialend> </answer>
         </answers>
     </node>
 	<node> <!-- 3 --> 
-        <npctext>Да! Теперь ты знаешь мою сокровенную тайну, но НИ В КОЕМ СЛУЧАЕ не говори что в кружке никому. Это секрет нашего острова, даже для других жителей острова. Запомни это! </npctext>
+        <npctext>Так а я, внучок, крыс с маяка своего ганяю. Им, вродь как, запах этот очень не нравится. Ты главное это, не говори, что в кружке парню в красном. Мы его уже неделю так стебем.</npctext>
         <answers>
             <answer tonode="0"><text>Ладно... Странные у вас забавы конечно. </text> <set><param v="1">oldMan1</param><param v="1">NoTabak</param></set> <dialend>true</dialend> </answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>Видал, внучок, видал. Оба они вглубь острова пошли, в сторону бара. </npctext>
+        <answers>
+            <answer tonode="0"> <text>Спасибо тебе, прощай </text><set><param v="2">oldMan1</param></set><dialend>true</dialend> </answer>
+			<answer tonode="5"> <text>А чего это у тебя в руках?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 5 -->
+        <npctext>Так а ты понюхай. Коль и узнаешь. </npctext>
+        <answers>
+            <answer tonode="1"> <text>Ничего себе ты придумал, ну давай. </text></answer>
+			<answer tonode="2"> <text>Нет конечно. Нюхать еще там что-то у тебя. </text></answer>
         </answers>
     </node>
 </dialogue>

@@ -1,9 +1,9 @@
 <dialogue>
     <node>
-        <npctext>Чего тебе, юноша? Больше у меня никаких секретов нет! </npctext>
+        <npctext>Чего тебе, юноша? Больше мне тебе нечего показывать. </npctext>
         <answers>
             <answer tonode="0"> <text>Да-да, бывай. </text> <dialend>true</dialend> </answer>
-            <answer tonode="1"> <text>Но ты ничего не рассказал. </text> <need><param v="2">NoTabak</param></need> </answer>
+            <answer tonode="1"> <text>Но ты ничего не показывал. </text> <need><param v="2">NoTabak</param></need> </answer>
         </answers>
     </node>
     <node>
