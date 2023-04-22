@@ -3,15 +3,15 @@
         <npctext>Ты совсем слепой или как?! Бар не работает! </npctext>
         <answers>
             <answer tonode="1"> <text>Но дверь была открыта... </text></answer>
-			<answer tonode="2"> <text>Спокойно, психованная. Уже ухожу.</text><set><param v="1">barman_1</param></set><dialend>true</dialend></answer>
+			<answer tonode="2"> <text>Спокойно, психованная. Уже ухожу.</text><set><param v="1">barman_1</param><param v="2">have_rum</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
     <node> <!-- 1 --> 
         <npctext>И дальше что? Нужно вламываться в каждое здание, где открыта дверь? Так что ли?</npctext>
         <answers>
             <answer tonode="2"> <text>Прощу прощения. Мне просто нужна одна бутылочка и не более.</text><need><param v="1">Svartovoi_1</param></need></answer>
-			<answer tonode="0"> <text>Уже ухожу.</text><set><param v="1">barman_1</param></set><dialend>true</dialend></answer>
-			<answer tonode="0"> <text>Да ухожу я, угомонись уже!</text><set><param v="1">barman_1</param></set><dialend>true</dialend></answer>
+			<answer tonode="0"> <text>Уже ухожу.</text><set><param v="1">barman_1</param><param v="2">have_rum</param></set><dialend>true</dialend></answer>
+			<answer tonode="0"> <text>Да ухожу я, угомонись уже!</text><set><param v="1">barman_1</param><param v="2">have_rum</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 	<node> <!-- 2 --> 
@@ -23,7 +23,7 @@
 	<node> <!-- 3 --> 
         <npctext>Тысяча чертей... Ладно! Забирай бутылку рома и вали отсюда!</npctext>
         <answers>
-            <answer tonode="3"> <text>Огромное спасибо, уже ухожу</text><set><param v="1">have_rum</param><param v="1">barman_1</param></set></answer>
+            <answer tonode="3"> <text>Огромное спасибо, уже ухожу</text><set><param v="1">have_rum</param><param v="1">barman_1</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>

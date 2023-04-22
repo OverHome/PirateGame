@@ -3,11 +3,11 @@
         <npctext>Наконец земля! Добро пожаловать на один из моих любимых островов, капитан! Тут всегда царит уникальная атмосфера! </npctext>
         <answers>
             <answer tonode = "1"> <text>Спасибо, Сильвер. Есть какие то новости?</text></answer>
-			<answer tonode = "1"> <text>Почему это один из твоих любимых островов?</text></answer>
+			<answer tonode = "7"> <text>Почему это один из твоих любимых островов?</text></answer>
         </answers>
     </node>
 	<node> <!-- 1 -->
-        <npctext>Есть. Прошедший шторм не прошел для нас бесследно, даже не смотря на ваше мастерское управление судном! </npctext>
+        <npctext>Прошедший шторм не прошел для нас бесследно, даже не смотря на ваше мастерское управление судном! </npctext>
         <answers>
             <answer tonode = "2"> <text>За похвалу спасибо, но насколько все серьезно?</text></answer>
         </answers>
@@ -38,9 +38,28 @@
         </answers>
     </node>
 	<node> <!-- 6 -->
-        <npctext>Остров куда более обитаем, чем может показаться, так что будьте бдительны. Я здесь не одну трубку потерял в своих приключениях...</npctext>
+        <npctext>Остров куда более обитаем, чем может показаться. Я здесь не одну трубку потерял в своих приключениях...</npctext>
         <answers>
-            <answer tonode = "4"> <text>Если я найду твою трубку - обязательно принесу.</text><set><param v="1">silver_i2</param></set><dialend>true</dialend></answer>
+            <answer tonode = "4"> <text>Спасибо, Сильвер. Скоро вернусь.</text><set><param v="1">silver_i2</param></set><dialend>true</dialend></answer>
+			<answer tonode = "4"> <text>Видимо руки ты тоже оставил где-то тут. Ладно, скоро вернусь.</text><set><param v="1">silver_i2</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 7 -->
+        <npctext>У этого острова есть один секрет, о котором мало кто знает. Остров считается наобитаемым, но на самом деле это не совсем так.</npctext>
+        <answers>
+            <answer tonode = "8"> <text>Звучит насториживающе, население острова не проблема для нас?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 8 -->
+        <npctext>Ни в коем разе. Они не трогают моряков, если ты не пытаешься что-то у них забрать или взять без спроса.</npctext>
+        <answers>
+            <answer tonode = "9"> <text>Хорошо. Буду надеятся, что ты прав.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 8 -->
+        <npctext>Капитан, у нас есть небольшая проблема.</npctext>
+        <answers>
+            <answer tonode = "1">Какая проблема?<text></text></answer>
         </answers>
     </node>
 </dialogue>

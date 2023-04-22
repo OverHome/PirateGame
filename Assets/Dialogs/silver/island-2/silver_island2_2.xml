@@ -1,0 +1,75 @@
+<dialogue>
+    <node>
+        <npctext>Как успехи, кэп? Удалось найти членов экипажа? </npctext>
+        <answers>
+            <answer tonode = "2"> <text>Пока нет</text><need><param v="0">yunga_i2</param></need></answer>
+			<answer tonode = "1"> <text>Мне удалось найти Джима, но он в ловушке.</text><need><param v="1">yunga_i2</param></need></answer>
+			<answer tonode = "6"> <text>Мне удалось найти Фрэнка</text><need><param v="1">find_frenk</param></need></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>Черт, скверные новости. Что с ним?</npctext>
+        <answers>
+            <answer tonode = "3"> <text>В каком-то храме он попытался забрать статуэтку и пол под ним опустился. Он не может выбраться.</text></answer>
+			<answer tonode = "2"> <text>Потом расскажу.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Как скажите, удачи вам!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Бывай.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext>Ох-хо-хо! Жажда приключений взыграла в молодой крови! В любом случае, мне кажется, что ему может помочь Фрэнк. Он бы смог соорудить что нибудь ему в помощь.</npctext>
+        <answers>
+            <answer tonode = "5"> <text>Кстати о нем, его мне тоже удалось найти.</text><need><param v="1">find_frenk</param></need></answer>
+			<answer tonode = "4"><text>Фрэнка я еще не нашел.</text><need><param v="0">find_frenk</param></need></answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>Ясно. В таком случае, вам стоит прежде всего найти его, а там видно будет!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Хорошо, бывай.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 5 -->
+        <npctext>Прекрасно! Но почему их обоих нет с вами? </npctext>
+        <answers>
+            <answer tonode = "6"> <text>У Фрэнка отшибло память, он даже забыл кто я такой. Не знаю, что теперь делать.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 6 -->
+        <npctext>Старый дурак видимо опять забылся, да? Не беспокойтесь, капитан! Есть решение!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>И какое?</text></answer>
+			<answer tonode = "0"> <text>Бросить все и поплыть дальше?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 7 -->
+        <npctext>Вам нужно найти его молот! Он всегда носит его с собой, что бы не забывать важные вещи, но видимо в этот раз память подвела его сильнее, чем он думал...</npctext>
+        <answers>
+            <answer tonode = "8"> <text>Молот?</text></answer>
+			<answer tonode = "9"> <text>Предположим, и где он может быть?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 8 -->
+        <npctext>Этот чудесный инструмент достался Фрэнку от его отца, а его отцу от его отца... Длинная история у этого молотка, но он всегда помогает Фрэну бороться с своей дырявой памятью.</npctext>
+        <answers>
+            <answer tonode = "6"> <text>Благодаря нему судно хотя бы не дырявое. Где искать молоток?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 9 -->
+        <npctext>Вероятно где-то в трюме. Вам нужно спуститься туда и посмотреть, где он. </npctext>
+        <answers>
+            <answer tonode = "0"> <text>Ясно, пойду поищу молоток.</text><set><param v="2">silver_i2</param></set><dialend>true</dialend></answer>
+			<answer tonode = "10"> <text>Почему ты сам не можешь мне его принести?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 10 -->
+        <npctext>Да тут такое дело, капитан... Лениво мне, да и кто за короблем будет следить. Не вы же!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Справедливо, ладно, пойду в трюм.</text><set><param v="2">silver_i2</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>

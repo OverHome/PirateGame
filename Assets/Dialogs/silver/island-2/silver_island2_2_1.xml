@@ -1,0 +1,16 @@
+<dialogue>
+    <node>
+        <npctext>Ну что, удалось найти молот? </npctext>
+        <answers>
+            <answer tonode = "2"> <text>Пока нет</text></answer>
+			<answer tonode = "1"> <text>Да, что дальше?</text><need><param v="1">molot_find</param></need></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Прекрасно! Теперь отправляйтесь к Фрэнку, думаю он сразу все вспомнит! Обычно это так работает по крайней мере...</npctext>
+        <answers>
+            <answer tonode = "2"> <text>Офигенная конечно команда... Ладно, увидимся</text><set><param v="3">silver_i2</param></set></answer>
+			<answer tonode = "1"> <text>Понял, скоро увидимся</text><set><param v="3">silver_i2</param></set></answer>
+        </answers>
+    </node>
+</dialogue>

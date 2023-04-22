@@ -2,7 +2,7 @@
     <node>
         <npctext>Здравствуй, капитан! </npctext>
         <answers>
-            <answer tonode = "1"> <text>Отплываем. </text> </answer>
+            <answer tonode = "1"> <text>Отплываем. </text></answer>
             <answer tonode = "2"> <text>Есть какие-то новости? </text><need><param v="0">example_1</param></need></answer>
 			<answer tonode = "3"> <text>А ты чего такой грустный</text><need><param v="1">example_1</param></need></answer>
         </answers>
