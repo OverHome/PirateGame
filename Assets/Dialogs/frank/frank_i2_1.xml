@@ -1,0 +1,37 @@
+<dialogue>
+    <node>
+        <npctext>Какие красивые цветы...</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Фрэнк, наконец я тебя нашел! Бегом на корабль!</text></answer>
+			<answer tonode = "0"> <text>Позже за ним зайду...</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>А-а-а! Вы кто, юноша? Чего вам от меня надо? Отойдите от меня!</npctext>
+        <answers>
+            <answer tonode = "2"> <text>Ты чего, это же я! Твой капитан!</text></answer>
+			<answer tonode = "0"> <text>Видимо это те проблемы с памятью, о которых говорил Сильвер...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Нет у меня никакого капитана! Я уже давно не моряк! Настолько давно, что... А насколько давно...</npctext>
+        <answers>
+            <answer tonode = "3"> <text>Давай же! Вспоминай! Мы буквально недавно прорвались сквозь шторм, ты отправился чинить корабль!</text></answer>
+			<answer tonode = "0"> <text>Бесполезно, нужно что нибудь придумать.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext>Не помню я! Отстань от меня!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Ну тебя, старый! Без тебя поплывём!</text><dialend>true</dialend></answer>
+			<answer tonode = "4"> <text>Бесполезно, нужно что нибудь придумать.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>Тут такие красивые цветочки...</npctext>
+        <answers>
+            <answer tonode = "2"> <text>Возможно Сильвер знает, как выйти из такой ситуации.</text><set><param v="1">frank_1</param></set></answer>
+			<answer tonode = "0"> <text>Наверняка Сильвер знает, как выйти из этой ситуации! И молчал!</text><set><param v="1">frank_1</param></set></answer>
+        </answers>
+    </node>
+</dialogue>

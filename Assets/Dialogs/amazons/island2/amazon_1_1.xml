@@ -1,0 +1,95 @@
+<dialogue>
+    <node>
+        <npctext>Как вы, бессовестное зверье, позволили себе. Зайти в священный храм?!</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Какой храм? Ничего не понимаю! Кто вы?!</text></answer>
+			<answer tonode = "3"> <text>Прошу простить, мы не знали, что это запрещенно.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>Не смей повышать на меня голос, мужичье! Ты заплатишь за невежество своей жизнью и жизнью свой команды!</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Ты кому угражать удумала, женщина?</text></answer>
+			<answer tonode = "3"> <text>Прошу простить, мы не знали, что это запрещенно.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Еще хоть слово из твоего мерзкого рта и ты не увидишь завтрашний день!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Рот свой закрой и освободи меня!</text><set><param v="1">kill_captian</param></set><dialend>true</dialend></answer>
+			<answer tonode = "3"> <text>...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext>Теперь слушайте мой глас! По древнему обычаю, вы можете быть прощены, если пройдете два испытания!</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Что за испытание?</text></answer>
+			<answer tonode = "0"> <text>...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>Я,Алкибия, властительница этих земель задам вам пять вопросов! Это первое испытыние! От них будет зависить ваша жизнь, так что подумайте перед ответом! </npctext>
+        <answers>
+            <answer tonode = "1"> <text>Хорошо.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 5 -->
+        <npctext>Вопрос первый! Раскаленная стрела дуб свалила близь меня. Что это?!</npctext>
+        <answers>
+            <answer tonode = "6"> <text>Молния?</text></answer>
+			<answer tonode = "2"> <text>Метеорит?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "2"> <text>Великан?</text><set><param v="1">bad_answer</param></set></answer>
+        </answers>
+    </node>
+	<node> <!-- 6 -->
+        <npctext>Хорошо, второй вопрос! Кто достаточно силен, чтобы разбивать корабли, но все еще боится солнца?</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Могущественный вампир?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "1"> <text>Кракен?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "7"> <text>Лед?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 7 -->
+        <npctext>Неплохо, третий вопрос! Крепка как скала, но рушится от слова. Что это?</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Приказ?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "8"> <text>Тишина?</text></answer>
+			<answer tonode = "2"> <text>Амазонка?</text><set><param v="1">bad_answer</param></set></answer>
+        </answers>
+    </node>
+	<node> <!-- 8 -->
+        <npctext>Вопрос четвертый! Я могу вызвать слезы, оживить мертвеца. Я рождаюсь в секунду и живу без конца. Что я?</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Ложь?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "7"> <text>Память?</text></answer>
+			<answer tonode = "2"> <text>Вера?</text><set><param v="1">bad_answer</param></set></answer>
+        </answers>
+    </node>
+	<node> <!-- 9 -->
+        <npctext>Верно, вопрос пятый! Легче пера, но долго не удержать. Что это?</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Дыхание?</text></answer>
+			<answer tonode = "7"> <text>Слово?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "2"> <text>Истина?</text><set><param v="1">bad_answer</param></set></answer>
+        </answers>
+    </node>
+	<node> <!-- 10 -->
+        <npctext>Вопросы кончились. Теперь нужно подвести итоги вашего испытания!</npctext>
+        <answers>
+            <answer tonode = "11"> <text>Ну что, какой результат?</text><need><param v="1">bad_answer</param></need></answer>
+			<answer tonode = "7"> <text>Ну что, какой результат?</text><need><param v="0">bad_answer</param></need></answer>
+        </answers>
+    </node>
+	<node> <!-- 11 -->
+        <npctext>Неплохо, мужичье! Вы ответили на все вопросы верно, а значит завтра отправляетесь на второе испытание!</npctext>
+        <answers>
+            <answer tonode = "12"> <text>А какое второе испытыние?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 12 -->
+        <npctext>Неплохо, мужичье! Вы ответили на все вопросы верно, а значит завтра отправляетесь на второе испытание!</npctext>
+        <answers>
+            <answer tonode = "12"> <text>А какое второе испытыние?</text></answer>
+        </answers>
+    </node>
+</dialogue>

@@ -4,7 +4,7 @@
         <answers>
             <answer tonode = "2"> <text>Пока нет</text><need><param v="0">yunga_i2</param></need></answer>
 			<answer tonode = "1"> <text>Мне удалось найти Джима, но он в ловушке.</text><need><param v="1">yunga_i2</param></need></answer>
-			<answer tonode = "6"> <text>Мне удалось найти Фрэнка</text><need><param v="1">find_frenk</param></need></answer>
+			<answer tonode = "6"> <text>Мне удалось найти Фрэнка</text><need><param v="1">frank_1</param></need></answer>
         </answers>
     </node>
 	<node> <!-- 1 -->
