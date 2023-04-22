@@ -37,9 +37,13 @@ public class DialogNPC : MonoBehaviour, IPointerClickHandler
     {
         if (_wait)
         {
-            _kapitan.StartDialog(Avatar, Name, TagName, Dialogs);
-            _wait = false;
+            StartDialog();
         }
-        
+    }
+
+    public void StartDialog()
+    {
+        _kapitan.StartDialog(Avatar, Name, TagName, Dialogs);
+        _wait = false;
     }
 }

@@ -96,6 +96,7 @@ public class Kapitan : MonoBehaviour
     
     public void StartDialog(Sprite avatar, string name, string tagName, List<TextAsset> dialogs)
     {
+        PlayerIsBusy = true;
         targetPosition = gameObject.transform.position;
         _inventory.Hide();
         TextDialog.Show();
