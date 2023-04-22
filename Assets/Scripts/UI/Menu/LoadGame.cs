@@ -9,11 +9,12 @@ namespace UI.Menu
         {
             Fade.sceneEnd = true;
             Debug.Log("OnClick");
+            Load("cuka");
         }
 
         public void Load(string name)
         {
-            SceneManager.LoadScene("Island_1");
+            SceneManager.LoadScene("Levels");
 
         }
 
