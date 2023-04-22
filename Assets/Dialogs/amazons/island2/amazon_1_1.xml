@@ -9,7 +9,7 @@
 	<node> <!-- 1 -->
         <npctext>Не смей повышать на меня голос, мужичье! Ты заплатишь за невежество своей жизнью и жизнью свой команды!</npctext>
         <answers>
-            <answer tonode = "1"> <text>Ты кому угражать удумала, женщина?</text></answer>
+            <answer tonode = "2"> <text>Ты кому угражать удумала, женщина?</text></answer>
 			<answer tonode = "3"> <text>Прошу простить, мы не знали, что это запрещенно.</text></answer>
         </answers>
     </node>
@@ -28,7 +28,7 @@
         </answers>
     </node>
 	<node> <!-- 4 -->
-        <npctext>Я,Алкибия, властительница этих земель задам вам пять вопросов! Это первое испытыние! От них будет зависить ваша жизнь, так что подумайте перед ответом! </npctext>
+        <npctext>Я, Алкибия, властительница этих земель, задам вам пять вопросов! Это первое испытыние! От них будет зависить ваша жизнь, так что подумайте перед ответом! </npctext>
         <answers>
             <answer tonode = "1"> <text>Хорошо.</text></answer>
         </answers>
@@ -37,47 +37,47 @@
         <npctext>Вопрос первый! Раскаленная стрела дуб свалила близь меня. Что это?!</npctext>
         <answers>
             <answer tonode = "6"> <text>Молния?</text></answer>
-			<answer tonode = "2"> <text>Метеорит?</text><set><param v="1">bad_answer</param></set></answer>
-			<answer tonode = "2"> <text>Великан?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "14"> <text>Метеорит?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "14"> <text>Великан?</text><set><param v="1">bad_answer</param></set></answer>
         </answers>
     </node>
 	<node> <!-- 6 -->
-        <npctext>Хорошо, второй вопрос! Кто достаточно силен, чтобы разбивать корабли, но все еще боится солнца?</npctext>
+        <npctext>Второй вопрос! Кто достаточно силен, чтобы разбивать корабли, но все еще боится солнца?</npctext>
         <answers>
-            <answer tonode = "1"> <text>Могущественный вампир?</text><set><param v="1">bad_answer</param></set></answer>
-			<answer tonode = "1"> <text>Кракен?</text><set><param v="1">bad_answer</param></set></answer>
+            <answer tonode = "15"> <text>Могущественный вампир?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "15"> <text>Кракен?</text><set><param v="1">bad_answer</param></set></answer>
 			<answer tonode = "7"> <text>Лед?</text></answer>
         </answers>
     </node>
 	<node> <!-- 7 -->
-        <npctext>Неплохо, третий вопрос! Крепка как скала, но рушится от слова. Что это?</npctext>
+        <npctext>Третий вопрос! Крепка как скала, но рушится от слова. Что это?</npctext>
         <answers>
-            <answer tonode = "1"> <text>Приказ?</text><set><param v="1">bad_answer</param></set></answer>
+            <answer tonode = "16"> <text>Приказ?</text><set><param v="1">bad_answer</param></set></answer>
 			<answer tonode = "8"> <text>Тишина?</text></answer>
-			<answer tonode = "2"> <text>Амазонка?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "16"> <text>Амазонка?</text><set><param v="1">bad_answer</param></set></answer>
         </answers>
     </node>
 	<node> <!-- 8 -->
         <npctext>Вопрос четвертый! Я могу вызвать слезы, оживить мертвеца. Я рождаюсь в секунду и живу без конца. Что я?</npctext>
         <answers>
-            <answer tonode = "1"> <text>Ложь?</text><set><param v="1">bad_answer</param></set></answer>
-			<answer tonode = "7"> <text>Память?</text></answer>
-			<answer tonode = "2"> <text>Вера?</text><set><param v="1">bad_answer</param></set></answer>
+            <answer tonode = "17"> <text>Ложь?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "9"> <text>Память?</text></answer>
+			<answer tonode = "17"> <text>Вера?</text><set><param v="1">bad_answer</param></set></answer>
         </answers>
     </node>
 	<node> <!-- 9 -->
-        <npctext>Верно, вопрос пятый! Легче пера, но долго не удержать. Что это?</npctext>
+        <npctext>Вопрос пятый! Легче пера, но долго не удержать. Что это?</npctext>
         <answers>
-            <answer tonode = "1"> <text>Дыхание?</text></answer>
-			<answer tonode = "7"> <text>Слово?</text><set><param v="1">bad_answer</param></set></answer>
-			<answer tonode = "2"> <text>Истина?</text><set><param v="1">bad_answer</param></set></answer>
+            <answer tonode = "10"> <text>Дыхание?</text></answer>
+			<answer tonode = "10"> <text>Слово?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "10"> <text>Истина?</text><set><param v="1">bad_answer</param></set></answer>
         </answers>
     </node>
 	<node> <!-- 10 -->
         <npctext>Вопросы кончились. Теперь нужно подвести итоги вашего испытания!</npctext>
         <answers>
-            <answer tonode = "11"> <text>Ну что, какой результат?</text><need><param v="1">bad_answer</param></need></answer>
-			<answer tonode = "7"> <text>Ну что, какой результат?</text><need><param v="0">bad_answer</param></need></answer>
+            <answer tonode = "18"> <text>Ну что, какой результат?</text><need><param v="1">bad_answer</param></need></answer>
+			<answer tonode = "11"> <text>Ну что, какой результат?</text><need><param v="0">bad_answer</param></need></answer>
         </answers>
     </node>
 	<node> <!-- 11 -->
@@ -87,9 +87,51 @@
         </answers>
     </node>
 	<node> <!-- 12 -->
-        <npctext>Неплохо, мужичье! Вы ответили на все вопросы верно, а значит завтра отправляетесь на второе испытание!</npctext>
+        <npctext>Вам нужно победить легендарного морского зверя в лесах это острова, где даже солнечный свет не касается земли.</npctext>
         <answers>
-            <answer tonode = "12"> <text>А какое второе испытыние?</text></answer>
+            <answer tonode = "13"> <text>Ох ё...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 13 -->
+        <npctext>Завтра вас ждет длинный день!</npctext>
+        <answers>
+            <answer tonode = "13"> <text>...</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 14 -->
+        <npctext>Неверный ответ! Удивительная глупость! Правильный ответ: молния!</npctext>
+        <answers>
+            <answer tonode = "6"> <text>...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 15 -->
+        <npctext>Неверно! Правильный ответ: лёд!</npctext>
+        <answers>
+            <answer tonode = "7"> <text>...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 16 -->
+        <npctext>Неверно! Ненужно быть амазонкой что бы догадаться! Правильный ответ: тишина!</npctext>
+        <answers>
+            <answer tonode = "8"> <text>...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 17 -->
+        <npctext>Глупость! Правильный ответ: память!</npctext>
+        <answers>
+            <answer tonode = "9"> <text>...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 18 -->
+        <npctext>Отвратительно! Некоторые ответы были не верные! Вы не прошли даже первое испытание, мужичье! Завтра вы будете казнены!</npctext>
+        <answers>
+            <answer tonode = "19"> <text>Может не надо...</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 19 -->
+        <npctext>Закрыть рты! Ждите завтра и примите свою смерть!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>...</text><set><param v="4">silver_i2</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>
