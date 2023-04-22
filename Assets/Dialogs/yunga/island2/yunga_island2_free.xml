@@ -1,0 +1,42 @@
+<dialogue>
+    <node>
+        <npctext>Здравствуйте, капитан! Простите меня за все, что случилось.</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Ничего, с тобой все в порядке?</text></answer>
+			<answer tonode = "2"> <text>В следующий раз думай, прежде чем делать, олух!</text></answer>
+        </answers>
+	</node>
+	<node>
+        <npctext>Простите, больше не повторится...</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Мы скоро отплываем, будь готов. Я не потерплю снова таких неудач.</text><set><param v="2">yunga_i2</param></set><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node> <!-- 2 -->
+        <npctext>Да, спасибо за беспокойство...</npctext>
+        <answers>
+            <answer tonode = "3"> <text>Не переживай, все когда то были неопытны.</text></answer>
+			<answer tonode = "3"> <text>Мы скоро отплываем. Будь готов.</text></answer>
+        </answers>
+	</node>
+	<node> <!-- 3 -->
+        <npctext>Капитан, можно вас на минутку?</npctext>
+        <answers>
+            <answer tonode = "4"> <text>Конечно, что-то случилось?</text></answer>
+			<answer tonode = "0"> <text>Нет времени.</text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node>
+        <npctext>Пока мы убегали, я успел заглянуть в тот храм снова, но в этот раз я перепрыгнул ловушку. Я смог забрать статуэтку!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Джим, нужно быть осторожнее.</text></answer>
+			<answer tonode = "0"> <text>Нашел ты время конечно, но молодец.</text></answer>
+        </answers>
+	</node>
+	<node>
+        <npctext>Прошу простить... Но заберите ее в благодарность.</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Хорошо, спасибо.</text><set><param v="2">get_statue</param><param v="2">yunga_i2</param></set><dialend>true</dialend></answer>
+        </answers>
+	</node>
+</dialogue>

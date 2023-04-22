@@ -4,6 +4,7 @@
         <answers>
             <answer tonode="1"> <text>Есть такое, бутылочка рома из бара. </text><need><param v="1">have_rum</param></need></answer>
 			<answer tonode="2"> <text>Пока нет.</text></answer>
+			<answer tonode="4"> <text>Я отказываюсь от твоего предложения. </text><need><param v="0">have_rum</param></need></answer>
 			<answer tonode="3"> <text>Они какая-то психованная. С ней невозможно договориться!</text><need><param v="2">have_rum</param></need></answer>
         </answers>
     </node>
@@ -21,6 +22,12 @@
     </node>
 	<node>
         <npctext>Ну вот и я о том же... Ладно, забудь.</npctext>
+        <answers>
+            <answer tonode="0"> <text>Понял, бывай</text><set><param v="0">Svartovoi_1</param><param v="2">example_1</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Ну и ладно, но с рулям я тебе помогать тоже соотвественно не стану.</npctext>
         <answers>
             <answer tonode="0"> <text>Понял, бывай</text><set><param v="0">Svartovoi_1</param><param v="2">example_1</param></set><dialend>true</dialend></answer>
         </answers>

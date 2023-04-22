@@ -1,0 +1,9 @@
+<dialogue>
+    <node>
+        <npctext>М-м-м-м. М-м! </npctext>
+        <answers>
+            <answer tonode = "0"> <text>Ага, я тоже так думаю. Скоро отплываем</text><dialend>true</dialend></answer>
+			<answer tonode = "0"> <text>М-м-м! М-м.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+</dialogue>
