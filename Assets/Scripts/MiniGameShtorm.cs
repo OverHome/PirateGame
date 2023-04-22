@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class MiniGameShtorm: MonoBehaviour
 {
     [SerializeField] public GameObject Helm;
+    [SerializeField] public GameObject Arrow;
+    [SerializeField] public List<Transform> BezierPoints;
+    [Range(0, 1)][SerializeField] public float ArrowPos;
     [SerializeField] public int Spead = 2;
     [SerializeField] public int ResistSpead = 1;
     [SerializeField] public int Health = 1000;
@@ -18,25 +22,67 @@ public class MiniGameShtorm: MonoBehaviour
 
     private float timeBeforSwitch;
     private bool IsMove;
+    private bool IsMouse;
+    private bool IsRight;
     private int helmRotation;
-    private Dictionary<string, int> positions;
-    public Dictionary<string, int> resistDerection;
-    private string neadPosition;
+    private float resDirection;
+    private float nextResDirection;
+    private float changeResDirTime;
+    private float neadAngle;
+    private float NextArrowPos;
     private Random random;
 
     private void Start()
     {
         random = new Random();
-        positions = new (){{"Left",90}, {"Right",-90}, {"Center",0}};
-        resistDerection = new Dictionary<string, int>() { { "Left", -1 }, { "Right", 1 }, { "Center", 0 } };
+        neadAngle = 0;
+        NextArrowPos = 0;
+        nextResDirection = 1;
         SetEvent(5);
+        SetResDir(2);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) IsMove = true;
-        if (Input.GetKeyUp(KeyCode.Mouse0)) IsMove = false;
+        GetInput();
         timeBeforSwitch -= Time.deltaTime;
+        changeResDirTime -= Time.deltaTime;
+        ArrowPos = Mathf.Lerp(ArrowPos, NextArrowPos, Time.deltaTime*2);
+        resDirection = Mathf.Lerp(resDirection, nextResDirection, Time.deltaTime*1);
+        neadAngle = GenAngle(ArrowPos);
+        SetArrowPosition();
+        print(resDirection);
+        print(nextResDirection);
+    }
+    
+    private void GetInput()
+    {
+        bool tIsMove = false;
+        bool tIsRight = false;
+        bool tIsMouse = false;
+        foreach(KeyCode vKey in System.Enum.GetValues(typeof(KeyCode))){
+            if(Input.GetKey(vKey)){
+                if (vKey == KeyCode.E)
+                {
+                    tIsMove = true;
+                    tIsRight = true;
+                }
+                if (vKey == KeyCode.Q)
+                {
+                    tIsMove = true;
+                    tIsRight = false;
+                } 
+                if (vKey == KeyCode.Mouse0)
+                {
+                    tIsMove = true;
+                    tIsMouse = true;
+                }
+            }
+        }
+        
+        IsMove = tIsMove;
+        IsRight = tIsRight;
+        IsMouse = tIsMouse;
     }
 
     private void FixedUpdate()
@@ -46,28 +92,55 @@ public class MiniGameShtorm: MonoBehaviour
         RotateHelm();
         TakeDamage();
         SwitchEvent();
+        ChangeResDir();
+    }
+
+    private void SetArrowPosition()
+    {
+        var p1 = BezierPoints[0].position;
+        var p2 = BezierPoints[1].position;
+        var p3 = BezierPoints[2].position;
+        var p4 = BezierPoints[3].position;
+        Arrow.transform.position = Bezier.GetPoint(p1, p2, p3, p4, ArrowPos);
+        Arrow.transform.rotation = Quaternion.Euler(0,0,GenAngle(ArrowPos));
     }
 
     private void SetEvent(float time)
     {
-        var a = random.Next(0, positions.Count);
-        neadPosition = positions.ElementAt(a).Key;
-        PositionText.text = neadPosition;
-        timeBeforSwitch = time;
+       // var a = random.Next(0, positions.Count);
+       // neadPosition = positions.ElementAt(a).Key;
+       // PositionText.text = neadPosition;
+       // timeBeforSwitch = time;
+       var a = (float)GetRandomNumber(0.1, 0.9);
+       NextArrowPos = a;
+       timeBeforSwitch = time;
+    }
+
+    private float GenAngle(float arrowPos)
+    {
+        return (180 * arrowPos - 90) * -1;
     }
 
     private void Resistance()
     {
-        if (Math.Abs(helmRotation + Spead+5 * resistDerection[neadPosition]) <= 90)
+        if (Math.Abs(helmRotation+ResistSpead*resDirection)<=90)
         {
-            var a = random.Next(1, 5);
-            int spead = ResistSpead;
-            if (a > 3)
-            {
-                spead = Spead + 1;
-            }
-            Helm.transform.rotation *= Quaternion.Euler(0, 0, spead*resistDerection[neadPosition]);
+            Helm.transform.rotation *= Quaternion.Euler(0, 0, ResistSpead*resDirection);
         }
+    }
+
+    private void ChangeResDir()
+    {
+        if (changeResDirTime <= 0)
+        {
+            SetResDir(random.Next(1, 5));
+        }
+    }
+
+    private void SetResDir(int rnd)
+    {
+        nextResDirection *= -1;
+        changeResDirTime = rnd;
     }
 
     private void SwitchEvent()
@@ -88,7 +161,7 @@ public class MiniGameShtorm: MonoBehaviour
 
     public void TakeDamage()
     {
-        if (Math.Abs(helmRotation - positions[neadPosition]) > Assumption)
+        if (Math.Abs(helmRotation - neadAngle) > Assumption)
         {
             Health -= Damage;
             HealthText.text = Health.ToString();
@@ -99,12 +172,26 @@ public class MiniGameShtorm: MonoBehaviour
     {
         if (IsMove)
         {
-            Vector2 getMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            int direction = getMousePosition.x > 0 ? -1 : 1;
+            int direction;
+            if (IsMouse)
+            {
+                Vector2 getMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                direction = getMousePosition.x > 0 ? -1 : 1;
+            }
+            else
+            {
+                direction = IsRight ? -1 : 1;
+            }
+           
             if (Math.Abs(helmRotation + Spead * direction) <= 90)
             {
                 Helm.transform.rotation *= Quaternion.Euler(0, 0, Spead*direction);
-            }
+            } 
         }
+    }
+    
+    public double GetRandomNumber(double minimum, double maximum)
+    {
+        return random.NextDouble() * (maximum - minimum) + minimum;
     }
 }
