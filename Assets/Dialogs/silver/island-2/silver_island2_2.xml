@@ -23,7 +23,7 @@
 	<node> <!-- 3 -->
         <npctext>Ох-хо-хо! Жажда приключений взыграла в молодой крови! В любом случае, мне кажется, что ему может помочь Фрэнк. Он бы смог соорудить что нибудь ему в помощь.</npctext>
         <answers>
-            <answer tonode = "5"> <text>Кстати о нем, его мне тоже удалось найти.</text><need><param v="1">find_frenk</param></need></answer>
+            <answer tonode = "5"> <text>Кстати о нем, его мне тоже удалось найти.</text><need><param v="1">frank_1</param></need></answer>
 			<answer tonode = "4"><text>Фрэнка я еще не нашел.</text><need><param v="0">find_frenk</param></need></answer>
         </answers>
     </node>
@@ -42,8 +42,8 @@
 	<node> <!-- 6 -->
         <npctext>Старый дурак видимо опять забылся, да? Не беспокойтесь, капитан! Есть решение!</npctext>
         <answers>
-            <answer tonode = "0"> <text>И какое?</text></answer>
-			<answer tonode = "0"> <text>Бросить все и поплыть дальше?</text></answer>
+            <answer tonode = "7"> <text>И какое?</text></answer>
+			<answer tonode = "7"> <text>Бросить все и поплыть дальше?</text></answer>
         </answers>
     </node>
 	<node> <!-- 7 -->
@@ -56,7 +56,7 @@
 	<node> <!-- 8 -->
         <npctext>Этот чудесный инструмент достался Фрэнку от его отца, а его отцу от его отца... Длинная история у этого молотка, но он всегда помогает Фрэну бороться с своей дырявой памятью.</npctext>
         <answers>
-            <answer tonode = "6"> <text>Благодаря нему судно хотя бы не дырявое. Где искать молоток?</text></answer>
+            <answer tonode = "9"> <text>Благодаря нему судно хотя бы не дырявое. Где искать молоток?</text></answer>
         </answers>
     </node>
 	<node> <!-- 9 -->
@@ -67,7 +67,7 @@
         </answers>
     </node>
 	<node> <!-- 10 -->
-        <npctext>Да тут такое дело, капитан... Лениво мне, да и кто за короблем будет следить. Не вы же!</npctext>
+        <npctext>Да тут такое дело, капитан... Лениво мне, да и кто за короблем будет следить. Не вы же! Да и посмотрите на меня! У меня же нет рук!</npctext>
         <answers>
             <answer tonode = "0"> <text>Справедливо, ладно, пойду в трюм.</text><set><param v="2">silver_i2</param></set><dialend>true</dialend></answer>
         </answers>
