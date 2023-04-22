@@ -2,15 +2,15 @@
     <node>
         <npctext>Ну что, удалось найти молот? </npctext>
         <answers>
-            <answer tonode = "2"> <text>Пока нет</text></answer>
 			<answer tonode = "1"> <text>Да, что дальше?</text><need><param v="1">molot_find</param></need></answer>
+            <answer tonode = "2"> <text>Пока нет</text><need><param v="0">molot_find</param></need><dialend>true</dialend></answer>
         </answers>
     </node>
 	<node>
-        <npctext>Прекрасно! Теперь отправляйтесь к Фрэнку, думаю он сразу все вспомнит! Обычно это так работает по крайней мере...</npctext>
+        <npctext>Прекрасно! Теперь отправляйтесь к Фрэнку, думаю он сразу все вспомнит! Раньше это работало так...</npctext>
         <answers>
-            <answer tonode = "2"> <text>Офигенная конечно команда... Ладно, увидимся</text><set><param v="3">silver_i2</param></set></answer>
-			<answer tonode = "1"> <text>Понял, скоро увидимся</text><set><param v="3">silver_i2</param></set></answer>
+            <answer tonode = "0"> <text>Офигенная конечно команда... Ладно, увидимся</text><dialend>true</dialend></answer>
+			<answer tonode = "0"> <text>Понял, скоро увидимся</text><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>

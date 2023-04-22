@@ -1,8 +1,8 @@
 <dialogue>
     <node>
-        <npctext>Восхитительные цветы...</npctext>
+        <npctext>Восхитительный цветок...</npctext>
         <answers>
-            <answer tonode = "1"> <text>Его сейчас только они и заботят. Нужно что нибудь придумать.</text><dialend>true</dialend></answer>
+            <answer tonode = "0"> <text>Главное, что бы он его не съел... Может Сильвер подаскажет что делать.</text><dialend>true</dialend></answer>
 			<answer tonode = "0"> <text>Тьфу на тебя, безтолковый!</text><dialend>true</dialend></answer>
         </answers>
     </node>
