@@ -2,8 +2,8 @@
     <node>
         <npctext>Здравствуй, капитан! </npctext>
         <answers>
-            <answer tonode = "1"> <text>Отплываем. </text></answer>
-            <answer tonode = "2"> <text>Есть какие-то новости? </text><need><param v="0">example_1</param></need></answer>
+            <answer tonode = "1"> <text>Отплываем. </text><need><param v="1">i1_find_guys</param></need></answer>
+            <answer tonode = "2"> <text>Есть какие-то новости? </text></answer>
 			<answer tonode = "3"> <text>А ты чего такой грустный</text><need><param v="1">example_1</param></need></answer>
         </answers>
     </node>
@@ -12,12 +12,9 @@
 		<answers>
             <answer tonode="0"> <text>Хорошо. </text> <dialend>true</dialend> </answer>
         </answers>
-        <answers>
-            <answer tonode = "2"> <text>Есть какие-то новости? </text> </answer>
-        </answers>
     </node>
     <node><!-- 2 -->
-        <npctext>Моряки, недавно прибывшие в город говорят, мол небольшой шторм начался в паре миль отсюда.\n Советую урепить ваш... Корабль. Прежде чем отплывать. </npctext>
+        <npctext>Моряки, недавно прибывшие в город говорят, мол небольшой шторм начался в паре миль отсюда. Советую укрепить ваш... Корабль. Прежде чем отплывать. </npctext>
         <answers>
             <answer tonode="0"> <text>Учту, спасибо. </text><set><param v="1">example_1</param></set> <dialend>true</dialend> </answer>
         </answers>

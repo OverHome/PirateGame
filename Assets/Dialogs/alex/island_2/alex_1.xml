@@ -1,0 +1,22 @@
+<dialogue>
+    <node>
+        <npctext>М-м-м-м м-м!</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Где ты все это время была?</text></answer>
+			<answer tonode = "0"> <text>Нет, с тобой нормально не поговоришь.</text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node>
+        <npctext>М-м-м м-м-м...</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Это же ты спасла нас, да?</text></answer>
+			<answer tonode = "0"> <text>Нет, с тобой нормально не поговоришь.</text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node>
+        <npctext>М-х-м...</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Я не кому не скажу. Бывай.</text><dialend>true</dialend></answer>
+        </answers>
+	</node>
+</dialogue>

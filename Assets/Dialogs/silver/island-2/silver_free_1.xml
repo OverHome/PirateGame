@@ -1,0 +1,43 @@
+<dialogue>
+    <node>
+        <npctext>Фух! Наконец ушли! Я же говорил - мой любимый остров. Даже традиционно потерял трубку, хорошо, что есть запасная.</npctext>
+        <answers>
+            <answer tonode = "1"> <text>Они не будут нас преследовать?</text></answer>
+			<answer tonode = "0"> <text>Что это вообще было, Сильвер?!</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>Не-а. Это территория острова свободна. Только тот храм, видимо, считается священным.</npctext>
+        <answers>
+            <answer tonode = "2"> <text>Прекрасно! А ты об этом не знал?</text></answer>
+			<answer tonode = "0"> <text>Что это вообще было, Сильвер?!</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Никак нет, капитан. Местные обычия этих красавец мне неизвестны.</npctext>
+        <answers>
+            <answer tonode = "3"> <text>Черт с ним, мы готовы отплывать?</text></answer>
+			<answer tonode = "3"> <text>Мы готовы отплыть от острова?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 3 -->
+        <npctext>Да, капитан! Зорро и Фрэнк уже на корабле, а Алекс и Джим почти готовы отплывать. Так что можете подниматься на корабль и мы готовы. Можете поговорить с ними, если хотите. </npctext>
+        <answers>
+            <answer tonode = "0"> <text>Хорошо, скоро поплывём.</text><set><param v="5">silver_i2</param></set></dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 4 -->
+        <npctext>Это амазонки, капитан. Защищают свой храм и сокровища в нем. Они решили, что мы у них стащить что-то захотели. </npctext>
+        <answers>
+            <answer tonode = "5"> <text>Так и есть. Джим пытался украсть статуэтку в храме.</text></answer>
+			<answer tonode = "3"> <text>Черт с ним, мы готовы отплывать?</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 5 -->
+        <npctext>Ну, он не знал местных традиций, не вините его. </npctext>
+        <answers>
+            <answer tonode = "3"> <text>Черт с ним, мы готовы отплывать?</text></answer>
+			<answer tonode = "3"> <text>Ладно уж, мы готовы отплыть от острова?</text></answer>
+        </answers>
+    </node>
+</dialogue>
