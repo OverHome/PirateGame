@@ -112,11 +112,22 @@ public class Kapitan : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "wal")
+        if (collision.gameObject.tag == "wall")
         {
+            PlayerIsBusy = true;
             int waste = toRight ? -1 : 1;
             transform.localRotation = Quaternion.Euler(0, 180 * (!toRight ? 0 : 1), 0);
             targetPosition = new Vector2(transform.position.x+0.1f*waste, transform.position.y);
+            
+        }
+    }
+    
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "wall")
+        {
+            PlayerIsBusy = false;
+            IsMove = false;
         }
     }
 
