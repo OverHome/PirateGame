@@ -8,7 +8,6 @@ using UnityEngine.Events;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] public List<CollecteblItem> Items = new();
-    [SerializeField] public UnityEvent OnInventoryChange;
     [SerializeField] public InventoryUI InventoryUI;
     [SerializeField] public int Size = 4;
     private Canvas _canvas;
@@ -26,7 +25,7 @@ public class Inventory : MonoBehaviour
     {
         if (Items.Count == Size) return false;
         Items.Add(item);
-        OnInventoryChange.Invoke();
+        InventoryUI.UpdatUI();
         return true;
     }
 
@@ -46,7 +45,7 @@ public class Inventory : MonoBehaviour
     {
         Items.RemoveAt(SelectedItem);
         UnSelect();
-        OnInventoryChange.Invoke();
+        InventoryUI.UpdatUI();
     }
 
     public void UnSelect()

@@ -161,7 +161,7 @@ public class Kapitan : MonoBehaviour
                 if (_inventory.AddItem(item))
                 {
                     TagName.gameObject.SetActive(false);
-                    Destroy(other.gameObject);    
+                    other.gameObject.SetActive(false);    
                 }
             }
         }
