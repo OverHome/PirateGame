@@ -7,7 +7,7 @@
         </answers>
     </node>
 	<node>
-        <npctext>Бегите!</npctext>
+        <npctext>Бегите скорее, пока патрули меняются!</npctext>
         <answers>
             <answer tonode="0"> <text>...</text><set><param v="1">save</param></set><dialend>true</dialend></answer>
         </answers>

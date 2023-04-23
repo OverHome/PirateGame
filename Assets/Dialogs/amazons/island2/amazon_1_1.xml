@@ -89,7 +89,7 @@
 	<node> <!-- 13 -->
         <npctext>Завтра вас ждет длинный день!</npctext>
         <answers>
-            <answer tonode = "13"> <text>...</text><dialend>true</dialend></answer>
+            <answer tonode = "13"> <text>...</text><set><param v="4">silver_i2</param><param v="1">next_camp</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 	<node> <!-- 14 -->
