@@ -27,11 +27,11 @@ public class EndLevel : MonoBehaviour
         {
             if (PlayerPrefs.GetInt(achiv.TrigerValueName) == achiv.TrigerValue)
             {
-                achievementsUnlockedText.text += achiv.Title+'\n';
+                achievementsUnlockedText.text += "🗸"+achiv.Title+'\n';
             }
             else
             {
-                achievementsLockedText.text += achiv.Title+'\n';
+                achievementsLockedText.text += "✗"+achiv.Title+'\n';
             }
         }
     }
