@@ -15,7 +15,7 @@
 	<node>
         <npctext>Принято! Залезай на корабль и я вас отшвартую. Удачного пути!</npctext>
         <answers>
-            <answer tonode="0"> <text>Спасибо, прощай</text><dialend>true</dialend></answer>
+            <answer tonode="0"> <text>Спасибо, прощай</text><set><param v="1">Exit1</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>
