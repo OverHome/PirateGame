@@ -23,7 +23,7 @@
         <npctext>Теперь слушайте мой глас! По древнему обычаю, вы можете быть прощены, если пройдете два испытания!</npctext>
         <answers>
             <answer tonode = "4"> <text>Что за испытание?</text></answer>
-			<answer tonode = "0"> <text>...</text></answer>
+			<answer tonode = "4"> <text>...</text></answer>
         </answers>
     </node>
 	<node> <!-- 4 -->
@@ -64,7 +64,7 @@
         <npctext>Вопрос пятый! Легче пера, но долго не удержать. Что это?</npctext>
         <answers>
             <answer tonode = "10"> <text>Дыхание?</text></answer>
-			<answer tonode = "10"> <text>Слово?</text><set><param v="1">bad_answer</param></set></answer>
+			<answer tonode = "20"> <text>Слово?</text><set><param v="1">bad_answer</param></set></answer>
         </answers>
     </node>
 	<node> <!-- 10 -->
@@ -105,7 +105,7 @@
         </answers>
     </node>
 	<node> <!-- 16 -->
-        <npctext>Неверно! Ненужно быть амазонкой что бы догадаться! Правильный ответ: тишина!</npctext>
+        <npctext>Неверно! Не нужно быть амазонкой что бы догадаться! Правильный ответ: тишина!</npctext>
         <answers>
             <answer tonode = "8"> <text>...</text></answer>
         </answers>
@@ -126,6 +126,12 @@
         <npctext>Закрыть рты! Ждите завтра и примите свою смерть!</npctext>
         <answers>
             <answer tonode = "0"> <text>...</text><set><param v="4">silver_i2</param><param v="1">next_camp</param></set><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 20 -->
+        <npctext>Великая глупость! Правильный ответ: дыхание!</npctext>
+        <answers>
+            <answer tonode = "10"> <text>...</text></answer>
         </answers>
     </node>
 </dialogue>
