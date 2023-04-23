@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 
 
-public class TrigerLoadNext : MonoBehaviour
+public class TrigerLoadNext : MonoBehaviour, IFeading
 {
     [SerializeField] public string TrigerValueName;
     [SerializeField] public int TrigerValue;
