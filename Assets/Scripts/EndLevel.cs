@@ -17,21 +17,21 @@ public class EndLevel : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(TrigerValueName) == TrigerValue)
         {
-            gameStatusText.text = "Вы прошли уровень";
+            gameStatusText.text = "Вы прошли уровень!";
         }
         else
         {
-            gameStatusText.text = "Вы НЕ прошли уровень";
+            gameStatusText.text = "Вы НЕ прошли уровень!";
         }
         foreach (var achiv in _achievementsList)
         {
             if (PlayerPrefs.GetInt(achiv.TrigerValueName) == achiv.TrigerValue)
             {
-                achievementsUnlockedText.text += "🗸"+achiv.Title+'\n';
+                achievementsUnlockedText.text += "+"+achiv.Title+'\n';
             }
             else
             {
-                achievementsLockedText.text += "✗"+achiv.Title+'\n';
+                achievementsLockedText.text += "-"+achiv.Title+'\n';
             }
         }
     }

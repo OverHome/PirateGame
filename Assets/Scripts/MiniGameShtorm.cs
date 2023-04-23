@@ -48,7 +48,7 @@ public class MiniGameShtorm: MonoBehaviour
 
     private void Update()
     {
-        Ship.transform.position = Vector2.MoveTowards(Ship.transform.position, new Vector2(PointToShip.transform.position.x, PointToShip.transform.position.y), Time.deltaTime * 3f);
+        Ship.transform.position = Vector2.MoveTowards(Ship.transform.position, new Vector2(PointToShip.transform.position.x, PointToShip.transform.position.y), Time.deltaTime * 0.5f);
         CheckGameStatus();
         GetInput();
         timeBeforSwitch -= Time.deltaTime;
