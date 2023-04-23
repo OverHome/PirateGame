@@ -3,14 +3,13 @@
         <npctext>Фух! Наконец ушли! Я же говорил - мой любимый остров. Даже традиционно потерял трубку, хорошо, что есть запасная.</npctext>
         <answers>
             <answer tonode = "1"> <text>Они не будут нас преследовать?</text></answer>
-			<answer tonode = "0"> <text>Что это вообще было, Сильвер?!</text></answer>
+			<answer tonode = "4"> <text>Что это вообще было, Сильвер?!</text></answer>
         </answers>
     </node>
 	<node> <!-- 1 -->
         <npctext>Не-а. Это территория острова свободна. Только тот храм, видимо, считается священным.</npctext>
         <answers>
             <answer tonode = "2"> <text>Прекрасно! А ты об этом не знал?</text></answer>
-			<answer tonode = "0"> <text>Что это вообще было, Сильвер?!</text></answer>
         </answers>
     </node>
 	<node> <!-- 2 -->
@@ -23,7 +22,7 @@
 	<node> <!-- 3 -->
         <npctext>Да, капитан! Зорро и Фрэнк уже на корабле, а Алекс и Джим почти готовы отплывать. Так что можете подниматься на корабль и мы готовы. Можете поговорить с ними, если хотите. </npctext>
         <answers>
-            <answer tonode = "0"> <text>Хорошо, скоро поплывём.</text><set><param v="5">silver_i2</param></set></dialend>true</dialend></answer>
+            <answer tonode = "0"> <text>Хорошо, скоро поплывём.</text><set><param v="1">silver_i2</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 	<node> <!-- 4 -->

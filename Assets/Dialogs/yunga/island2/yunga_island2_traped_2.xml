@@ -2,7 +2,7 @@
     <node>
         <npctext>Капитан? Вы нашли Фрэнка? </npctext>
         <answers>
-            <answer tonode = "1"> <text>Да, нашел, но там есть небольшая проблема. Подожди немного.</text><need><param v="1">frank_find</param></need></answer>
+            <answer tonode = "1"> <text>Да, нашел, но там есть небольшая проблема. Подожди немного.</text><need><param v="1">frank_1</param></need></answer>
 			<answer tonode = "2"> <text>Нет, еще ищу.</text><dialend>true</dialend></answer>
         </answers>
     </node>

@@ -2,7 +2,7 @@
     <node>
         <npctext>Я готов к отплытию, капитан. </npctext>
         <answers>
-            <answer tonode = "1"> <text>Хорошо, скоро отплываем.</text><dialend>true</dialend></answer>
+            <answer tonode = "0"> <text>Хорошо, скоро отплываем.</text><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>
