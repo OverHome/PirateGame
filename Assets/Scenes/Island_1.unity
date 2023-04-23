@@ -7132,7 +7132,7 @@ MonoBehaviour:
   - pref: i1_find_guys
     value: 1
   CleanUp: 1
-  UseList: 1
+  UseList: 0
 --- !u!1 &1024943368
 GameObject:
   m_ObjectHideFlags: 0

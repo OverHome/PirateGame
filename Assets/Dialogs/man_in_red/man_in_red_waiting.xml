@@ -16,7 +16,7 @@
 	<node> <!-- 2 -->
         <npctext>Та-а-ак! И что же там? </npctext>
         <answers>
-            <answer tonode="3"> <text>В кружке обычный табак.</text></answer>
+            <answer tonode="3"> <text>В кружке обычный табак.</text><set><param v="1">lair</param></set></answer>
 			<answer tonode="5"> <text>В кружке какие-то странные водоросли.</text></answer>
         </answers>
     </node>
