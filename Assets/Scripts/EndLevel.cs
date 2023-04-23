@@ -41,6 +41,10 @@ public class EndLevel : MonoBehaviour
 
     public void SetP(string name)
     {
+        if (PlayerPrefs.GetInt(TrigerValueName) != TrigerValue)
+        {
+            name = "StartMenu";
+        }
         PlayerPrefs.SetInt(name, 1);
     }
 }
