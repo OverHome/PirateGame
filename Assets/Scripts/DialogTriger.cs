@@ -11,6 +11,7 @@ public class DialogTriger : MonoBehaviour
     private void Start()
     {
         _dialog = GetComponent<DialogNPC>();
+        
         IsUse = false;
     }
     
@@ -20,6 +21,7 @@ public class DialogTriger : MonoBehaviour
         {
             if (PlayerPrefs.GetInt(TrigerValueName) == TrigerValue)
             {
+                _dialog.enabled = true;
                 _dialog.StartDialog();
                 IsUse = true;
             }
