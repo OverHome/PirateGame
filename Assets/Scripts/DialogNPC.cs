@@ -43,6 +43,8 @@ public class DialogNPC : MonoBehaviour, IPointerClickHandler
 
     public void StartDialog()
     {
+        gameObject.GetComponent<SpriteRenderer>().flipX = _kapitan.transform.rotation.eulerAngles.magnitude != 180;
+
         _kapitan.StartDialog(Avatar, Name, TagName, Dialogs);
         _wait = false;
     }
