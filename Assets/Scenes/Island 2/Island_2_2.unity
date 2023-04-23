@@ -1683,6 +1683,7 @@ GameObject:
   - component: {fileID: 573193133}
   - component: {fileID: 573193132}
   - component: {fileID: 573193131}
+  - component: {fileID: 573193135}
   m_Layer: 0
   m_Name: Nepeci_20
   m_TagString: Untagged
@@ -1745,7 +1746,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.3125, y: 0.75}
+    oldSize: {x: 0.3125, y: 0.8125}
     newSize: {x: 0.3125, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1795,7 +1796,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 731406697, guid: e6d0ab0028237ae4aa8b1362246e870f, type: 3}
+  m_Sprite: {fileID: 594068380, guid: 40b257120d82d4f45a915fb5c7e03eea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1821,6 +1822,27 @@ Transform:
   m_Father: {fileID: 2139366692}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &573193135
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573193130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b1853901a56d7346b105da4c6730157, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &582484709
 GameObject:
   m_ObjectHideFlags: 0
