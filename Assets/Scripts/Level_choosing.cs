@@ -27,9 +27,9 @@ public class Level_choosing : MonoBehaviour
         },
         new Level()
         {
-            LevelName = "island 2",
-            StartSceneName = "island 2",
-            IsAvalible = false
+            LevelName = "Island_2",
+            StartSceneName = "Island_2",
+            IsAvalible = true
         },
         new Level()
         {
