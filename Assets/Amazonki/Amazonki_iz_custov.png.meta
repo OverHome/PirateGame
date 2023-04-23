@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,7 +129,469 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 798
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20808681eff94be4db0c054dab5d62d0
+      internalID: -2085497553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 760
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61c73c55a8cd2349990be39c762585c
+      internalID: -1187569257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 722
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a56d96be7e09ff4d84515fdb3084b56
+      internalID: 576646771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 684
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0115436d4175c764dae5633fe663d478
+      internalID: -1491557525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1cac6f35869a945989549e37aeaa4a
+      internalID: 1381697329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acffe7b456939040a41774cc4d930d9
+      internalID: 1109787303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 570
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0f481c731670e448d67be0c5c4c0f0
+      internalID: 1663315162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556add40235c26e4cb6d791ee015146a
+      internalID: -222389519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 494
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9089929281df77147a0543d48e16d09e
+      internalID: -1811704898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d36df6263e4754c90b085ef3d40f50
+      internalID: -1856179156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8abc3336b636f4ba8d1d59a3bc313a
+      internalID: 1063516090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 380
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5226d9817b0e9a742af4d9bf6432b567
+      internalID: -1416852982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24657305225bd64c8672e2d7eb6bad0
+      internalID: -787987369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3051009c69932b441967a5ed8d315cf9
+      internalID: 811071396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b228c5ab58785c408556669eaba5035
+      internalID: -256765384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8d6e4e158f5754ca20ab1a7e9d5922
+      internalID: 1048246201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 190
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06967513dbecb0f48a42d8515666bbe8
+      internalID: 1233003960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77587b2ab59df6448bc9e6cdb4496f2f
+      internalID: -1426116541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d5fbbc89e648042aa4fb1de4eac7df
+      internalID: 2002432942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b809b67b3fd51478118696080f6640
+      internalID: 525379011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2ba38fa1b60554eb04919347b837e2
+      internalID: -1346634545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Amazonki_iz_custov_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 124
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73b562e2473b4949b95bfde82cd9ec9
+      internalID: 1677215452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -140,7 +602,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Amazonki_iz_custov_0: -2085497553
+      Amazonki_iz_custov_1: -1187569257
+      Amazonki_iz_custov_10: 1063516090
+      Amazonki_iz_custov_11: -1416852982
+      Amazonki_iz_custov_12: -787987369
+      Amazonki_iz_custov_13: 811071396
+      Amazonki_iz_custov_14: -256765384
+      Amazonki_iz_custov_15: 1048246201
+      Amazonki_iz_custov_16: 1233003960
+      Amazonki_iz_custov_17: -1426116541
+      Amazonki_iz_custov_18: 2002432942
+      Amazonki_iz_custov_19: 525379011
+      Amazonki_iz_custov_2: 576646771
+      Amazonki_iz_custov_20: -1346634545
+      Amazonki_iz_custov_21: 1677215452
+      Amazonki_iz_custov_3: -1491557525
+      Amazonki_iz_custov_4: 1381697329
+      Amazonki_iz_custov_5: 1109787303
+      Amazonki_iz_custov_6: 1663315162
+      Amazonki_iz_custov_7: -222389519
+      Amazonki_iz_custov_8: -1811704898
+      Amazonki_iz_custov_9: -1856179156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
