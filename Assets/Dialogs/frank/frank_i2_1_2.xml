@@ -2,8 +2,21 @@
     <node>
         <npctext>Восхитительный цветок...</npctext>
         <answers>
-            <answer tonode = "0"> <text>Главное, что бы он его не съел... Может Сильвер подаскажет что делать.</text><dialend>true</dialend></answer>
+			<answer tonode = "1"> <text>Держи, я принес твой молоток.</text><need><param v="1">molot_find</param></need></answer>
+            <answer tonode = "0"> <text>Главное, что бы он его не съел... Может Сильвер подаскажет что делать.</text><need><param v="0">molot_find</param></need><dialend>true</dialend></answer>
 			<answer tonode = "0"> <text>Тьфу на тебя, безтолковый!</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node> <!-- 1 -->
+        <npctext>Что это?</npctext>
+        <answers>
+            <answer tonode = "2"> <text>Это молоток, которым ты не раз чинил корабль! Ну же, вспоминай! Ты плотник, работаешь сейчас на меня.</text></answer>
+        </answers>
+    </node>
+	<node> <!-- 2 -->
+        <npctext>Молоток... А! Точно! Я вспомнил! Вы же наш бравый капитан!</npctext>
+        <answers>
+            <answer tonode = "2"> <text>Ну наконец то! Нужно вытащить нашего пропащего юнгу!</text><set><param v="1">amazons_attack</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>

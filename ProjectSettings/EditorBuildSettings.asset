@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Island 1/ShromEndGame.unity
     guid: 0de3fd914b0f0be4694a3b8d38bc524b
+  - enabled: 1
+    path: Assets/Scenes/camp_i2.unity
+    guid: 55b0a750649aa164a801fd25541a33ad
+  - enabled: 1
+    path: Assets/Scenes/Island_2.unity
+    guid: bbe276f6505af7b4b86d8afcbdd1a9e1
   m_configObjects: {}
