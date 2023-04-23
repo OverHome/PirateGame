@@ -16,7 +16,7 @@
 	<node>
         <npctext>М-х-м...</npctext>
         <answers>
-            <answer tonode = "0"> <text>Я не кому не скажу. Увидимся.</text><set><param v="1">alex_1</param></set><dialend>true</dialend></answer>
+            <answer tonode = "0"> <text>Я не кому не скажу. Увидимся.</text><set><param v="1">secret_alex</param><param v="1">alex_1</param></set><dialend>true</dialend></answer>
         </answers>
 	</node>
 	<node>

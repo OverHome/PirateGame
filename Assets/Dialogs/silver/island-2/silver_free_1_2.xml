@@ -2,7 +2,7 @@
     <node>
         <npctext>Мы готовы отплывать, кэп?</npctext>
         <answers>
-            <answer tonode = "0"> <text>Отплываем.</text><dialend>true</dialend></answer>
+            <answer tonode = "0"> <text>Отплываем.</text><set><param v="1">exit_2</param></set><dialend>true</dialend></answer>
 			<answer tonode = "0"> <text>Еще пару минут.</text><dialend>true</dialend></answer>
         </answers>
 	</node>

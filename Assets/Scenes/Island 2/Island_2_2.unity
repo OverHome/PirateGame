@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19956126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.8, y: -4.4163, z: 0.069007635}
+  m_LocalPosition: {x: -0.77, y: -4.4163, z: 0.069007635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -871,7 +871,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 0bd2dd9f24f86634f86beb49b571f779, type: 3}
   - {fileID: 4900000, guid: c7bd7a36027f80e4ca60ef39238f9114, type: 3}
   Name: "\u0421\u0438\u043B\u044C\u0432\u0435\u0440"
-  TagName: silver_i2
+  TagName: silver_i2_1
   Reversed: 1
   Avatar: {fileID: 0}
 --- !u!61 &246092626
@@ -1378,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.88, y: 2.581}
+  m_AnchoredPosition: {x: 8.08, y: 2.581}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.9658224, y: 0.5}
 --- !u!114 &519420033

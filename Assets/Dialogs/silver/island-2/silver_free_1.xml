@@ -22,7 +22,7 @@
 	<node> <!-- 3 -->
         <npctext>Да, капитан! Зорро и Фрэнк уже на корабле, а Алекс и Джим почти готовы отплывать. Так что можете подниматься на корабль и мы готовы. Можете поговорить с ними, если хотите. </npctext>
         <answers>
-            <answer tonode = "0"> <text>Хорошо, скоро поплывём.</text><set><param v="1">silver_i2</param></set><dialend>true</dialend></answer>
+            <answer tonode = "0"> <text>Хорошо, скоро поплывём.</text><set><param v="1">silver_i2_1</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 	<node> <!-- 4 -->
