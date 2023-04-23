@@ -59,7 +59,7 @@
 	<node> <!-- 8 -->
         <npctext>Капитан, у нас есть небольшая проблема.</npctext>
         <answers>
-            <answer tonode = "1">Какая проблема?<text></text></answer>
+            <answer tonode = "1"><text>Какая проблема?</text></answer>
         </answers>
     </node>
 </dialogue>
