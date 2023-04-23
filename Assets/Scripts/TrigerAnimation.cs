@@ -8,6 +8,7 @@ public class TrigerAnimation : MonoBehaviour
     [SerializeField] public int TrigerValue;
     [SerializeField] public int NextTrigerValue;
 
+
     private bool IsUse;
     private Animator _animator;
     private void Start()
@@ -31,6 +32,7 @@ public class TrigerAnimation : MonoBehaviour
 
     public void OnAnimatorStop()
     {
+
         PlayerPrefs.SetInt(NextTrigerValueName, NextTrigerValue);
     }
 }
