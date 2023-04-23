@@ -9,14 +9,20 @@
 	<node>
         <npctext>М-м-м м-м-м...</npctext>
         <answers>
-            <answer tonode = "0"> <text>Это же ты спасла нас, да?</text></answer>
-			<answer tonode = "0"> <text>Нет, с тобой нормально не поговоришь.</text><dialend>true</dialend></answer>
+            <answer tonode = "2"> <text>Это же ты спасла нас, да?</text></answer>
+			<answer tonode = "3"> <text>Ты не знаешь кто нас спас?</text></answer>
         </answers>
 	</node>
 	<node>
         <npctext>М-х-м...</npctext>
         <answers>
-            <answer tonode = "0"> <text>Я не кому не скажу. Бывай.</text><dialend>true</dialend></answer>
+            <answer tonode = "0"> <text>Я не кому не скажу. Увидимся.</text><set><param v="1">alex_1</param></set><dialend>true</dialend></answer>
+        </answers>
+	</node>
+	<node>
+        <npctext>М-м!</npctext>
+        <answers>
+            <answer tonode = "0"> <text>Ну и ладно, увидимся.</text><set><param v="1">alex_1</param></set><dialend>true</dialend></answer>
         </answers>
 	</node>
 </dialogue>
