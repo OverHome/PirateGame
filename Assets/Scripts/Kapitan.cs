@@ -145,6 +145,7 @@ public class Kapitan : MonoBehaviour
         if (!PlayerIsBusy)
         {
             TakeItem = item.name;
+            PlayerPrefs.SetInt(item.name, 1);
             PlayerIsBusy = true; 
         }
     }

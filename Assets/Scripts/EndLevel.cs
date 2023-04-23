@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class EndLevel : MonoBehaviour
@@ -12,6 +13,8 @@ public class EndLevel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI achievementsUnlockedText;
     [SerializeField] private TextMeshProUGUI achievementsLockedText;
     [SerializeField] private List<Achievements> _achievementsList;
+
+    private string LvlName;
 
     private void Start()
     {
@@ -34,6 +37,11 @@ public class EndLevel : MonoBehaviour
                 achievementsLockedText.text += "-"+achiv.Title+'\n';
             }
         }
+    }
+
+    public void SetP(string name)
+    {
+        PlayerPrefs.SetInt(name, 1);
     }
 }
 
