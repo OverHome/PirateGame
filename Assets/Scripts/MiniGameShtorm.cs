@@ -11,6 +11,8 @@ public class MiniGameShtorm: MonoBehaviour
     [SerializeField] public GameObject Helm;
     [SerializeField] public GameObject Arrow;
     [SerializeField] public List<Transform> BezierPoints;
+    [SerializeField] public GameObject Ship;
+    [SerializeField] public Transform PointToShip;
     [Range(0, 1)][SerializeField] public float ArrowPos;
     [SerializeField] public int Spead = 2;
     [SerializeField] public int ResistSpead = 1;

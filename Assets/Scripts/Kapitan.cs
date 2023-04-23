@@ -21,6 +21,8 @@ public class Kapitan : MonoBehaviour
     [SerializeField] public TextDialog TextDialog;
 
     private Animator anim;
+    private string TrigerValueName;
+    private int TrigerValue;
     void Start()
     {
         
@@ -65,7 +67,7 @@ public class Kapitan : MonoBehaviour
             {
                 targetPosition = getMousePosition;
                 toRight = targetPosition.x > transform.position.x;
-                transform.localRotation = Quaternion.Euler(0, 180 * (toRight ? 0 : 1), 0);
+                gameObject.GetComponent<SpriteRenderer>().flipX = !toRight;
             }
         }
         anim.SetFloat("MoveX", Math.Abs(transform.position.x - targetPosition.x));
@@ -77,20 +79,25 @@ public class Kapitan : MonoBehaviour
     {
         if (targetPosition.x == transform.position.x)
         {
+            PlayerPrefs.SetInt(TrigerValueName, TrigerValue);
             _inventory.DelUsedItem();
             IsUseItem = false;
             PlayerIsBusy = false;
         }
     }
 
-    public void SetUseItem(Vector2 vector2)
+    public void SetUseItem(Vector2 vector2, string trigerValueName, int trigerValue)
     {
+        TrigerValueName = trigerValueName;
+        TrigerValue = trigerValue;
+        gameObject.GetComponent<SpriteRenderer>().flipX = transform.position.x>vector2.x;
         targetPosition = vector2;
         IsUseItem = true;
     }
     
     public void SetMoveTo(Vector2 vector2)
     {
+        gameObject.GetComponent<SpriteRenderer>().flipX = transform.position.x>vector2.x;
         targetPosition = vector2;
         PlayerIsBusy = true;
     }
@@ -118,7 +125,7 @@ public class Kapitan : MonoBehaviour
         {
             PlayerIsBusy = true;
             int waste = toRight ? -1 : 1;
-            transform.localRotation = Quaternion.Euler(0, 180 * (!toRight ? 0 : 1), 0);
+            gameObject.GetComponent<SpriteRenderer>().flipX = !toRight;
             targetPosition = new Vector2(transform.position.x+0.1f*waste, transform.position.y);
             
         }

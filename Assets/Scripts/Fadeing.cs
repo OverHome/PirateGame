@@ -8,19 +8,28 @@ public class Fadeing : MonoBehaviour
     private Animator _animation;
     private bool isFadeing;
     private GoInOut _go;
+    private TrigerLoadNext _trigerLoadNext;
     
     void Start()
     {
         _animation = GetComponent<Animator>();
         isFadeing = _animation.GetBool("fade");
         gameObject.SetActive(false);
-        
+        _trigerLoadNext = null;
     }
 
     public void FadeIn(GoInOut goInOut)
     {
         if (isFadeing) return;
         _go = goInOut;
+        gameObject.SetActive(true);
+        isFadeing = !isFadeing;
+        _animation.SetBool("fade", isFadeing);
+    }
+    public void FadeIn(TrigerLoadNext trigerLoadNext)
+    {
+        if (isFadeing) return;
+        _trigerLoadNext = trigerLoadNext;
         gameObject.SetActive(true);
         isFadeing = !isFadeing;
         _animation.SetBool("fade", isFadeing);
@@ -36,13 +45,29 @@ public class Fadeing : MonoBehaviour
 
     public void HendingIn()
     {
-        _go.OnFafeIn();
+        if (_trigerLoadNext==null)
+        {
+            _go.OnFafeIn();
+        }
+        else
+        {
+            _trigerLoadNext.OnFafeIn();
+        }
     }
     
     public void HendingOut()
     {
         gameObject.SetActive(false);
-        _go.OnFafeOut();
+        
+        if (_trigerLoadNext==null)
+        {
+            _go.OnFafeOut();
+        }
+        else
+        {
+            _trigerLoadNext.OnFafeOut();
+        }
+        
     }
 }
 

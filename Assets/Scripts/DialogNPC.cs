@@ -13,8 +13,10 @@ public class DialogNPC : MonoBehaviour, IPointerClickHandler
     [SerializeField] public List<TextAsset> Dialogs;
     [SerializeField] public string Name;
     [SerializeField] public string TagName;
+    [SerializeField] public bool Reversed = true;
+    
     public Sprite Avatar;
-
+    
     private void Start()
     {
         _kapitan = GameObject.Find("kapitan").GetComponent<Kapitan>();
@@ -43,7 +45,7 @@ public class DialogNPC : MonoBehaviour, IPointerClickHandler
 
     public void StartDialog()
     {
-        gameObject.GetComponent<SpriteRenderer>().flipX = _kapitan.transform.rotation.eulerAngles.magnitude != 180;
+        if (Reversed) gameObject.GetComponent<SpriteRenderer>().flipX = !_kapitan.GetComponent<SpriteRenderer>().flipX;
 
         _kapitan.StartDialog(Avatar, Name, TagName, Dialogs);
         _wait = false;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40b257120d82d4f45a915fb5c7e03eea
+guid: 89889fe281ad0d644bcc8d89db8dcf9e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,138 +131,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Unga_0
+      name: Zorro_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 56
-        width: 8
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd68cd5d06c1e924f9ad7611b837487e
-      internalID: 237617772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unga_1
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 56
+        x: 1
+        y: 60
         width: 10
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48edbdd02478cd044b5690f4ba85be64
-      internalID: 1727394025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unga_2
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 56
-        width: 7
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9c8428e31cc19941b00ca2e7c7ec629
-      internalID: 2019865072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unga_3
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 56
-        width: 7
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96916e3b77f61694c84f4d245f241963
-      internalID: -576911413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unga_4
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 29
-        width: 27
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82bc389e68fad90498b7a2405ac87dc8
-      internalID: 1216134550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unga_5
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 31
-        width: 17
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e3e6fa2de875f4458d4df17957a555a
-      internalID: -867351409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Unga_6
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 31
-        width: 12
         height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -271,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3276ccf94873eb489e7058379dfff09
-      internalID: -1556269012
+      spriteID: 96c2f4909cc7665489aec7c6acf81f8a
+      internalID: 1364374190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unga_7
+      name: Zorro_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
+        x: 12
+        y: 60
         width: 10
-        height: 26
+        height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,19 +166,145 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0620ba81f0a10a44c8ff68c2f7edfbdc
-      internalID: 594068380
+      spriteID: 72abf9b594a12e0429a0aff1b21e2df5
+      internalID: -1083833069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unga_8
+      name: Zorro_2
       rect:
         serializedVersion: 2
-        x: 14
-        y: 2
+        x: 23
+        y: 60
         width: 10
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9850e8aaf48534791b83b2ab763672
+      internalID: -1045596269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorro_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 60
+        width: 10
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9abd8d24c0ef04c9292f6bfe355edb
+      internalID: 2055823751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorro_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 34
+        width: 10
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb866f35aa99934eb470c6a5a0e18d6
+      internalID: -999097378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorro_5
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 34
+        width: 10
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e1499a24f958547b927df7718e9c6d
+      internalID: -1139544297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorro_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 34
+        width: 10
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d6d656356abfa479c597eb0d041033
+      internalID: 2041701684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorro_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 34
+        width: 10
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce93f9511e8042c4abde57b2c66c6107
+      internalID: -1852024693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorro_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 8
+        width: 9
         height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -313,19 +313,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4746e361d2aeb914bab0302ff1c3856e
-      internalID: 1216020889
+      spriteID: 52cca74420c439d4db7dc5f44a43c7c5
+      internalID: -909493674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unga_9
+      name: Zorro_9
       rect:
         serializedVersion: 2
-        x: 26
-        y: 2
+        x: 11
+        y: 8
         width: 10
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6174309dc080fb47842554b915855b8
+      internalID: -991207484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorro_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 8
+        width: 9
         height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -334,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58833c82c5ad13c4aae55074b10259af
-      internalID: 1100762796
+      spriteID: 0770cbde25e400545b26535dd0bafe62
+      internalID: -1818797042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Unga_10
+      name: Zorro_11
       rect:
         serializedVersion: 2
-        x: 38
-        y: 2
-        width: 10
-        height: 26
+        x: 32
+        y: 8
+        width: 9
+        height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,8 +376,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40d69ec5a89600e4e940fc2d816369c3
-      internalID: 245911744
+      spriteID: 9c04085d8a03e2c47af258e68fd85dd4
+      internalID: 1560761406
       vertices: []
       indices: 
       edges: []
@@ -372,17 +393,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Unga_0: 237617772
-      Unga_1: 1727394025
-      Unga_10: 245911744
-      Unga_2: 2019865072
-      Unga_3: -576911413
-      Unga_4: 1216134550
-      Unga_5: -867351409
-      Unga_6: -1556269012
-      Unga_7: 594068380
-      Unga_8: 1216020889
-      Unga_9: 1100762796
+      Zorro_0: 1364374190
+      Zorro_1: -1083833069
+      Zorro_10: -1818797042
+      Zorro_11: 1560761406
+      Zorro_2: -1045596269
+      Zorro_3: 2055823751
+      Zorro_4: -999097378
+      Zorro_5: -1139544297
+      Zorro_6: 2041701684
+      Zorro_7: -1852024693
+      Zorro_8: -909493674
+      Zorro_9: -991207484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

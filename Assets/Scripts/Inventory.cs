@@ -30,11 +30,11 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    public void UseItem(int expectedItem, Vector2 position)
+    public void UseItem(int expectedItem, Vector2 position, string TrigerValueName, int TrigerValue)
     {
         if (expectedItem == Items[SelectedItem].ItemId)
         {
-            _kapitan.SetUseItem(position);
+            _kapitan.SetUseItem(position, TrigerValueName, TrigerValue);
         }
         else
         {

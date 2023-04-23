@@ -22,7 +22,7 @@
 	<node> <!-- 3 -->
         <npctext>Отплыть... А ну да! Я же музыкант на лучшем фрегате в этих морях!\nУже бегу, ваше пресветейшество. </npctext>
         <answers>
-            <answer tonode="0"> <text> Иди уже, лодырь. </text><set><param v="1">i1_find_guys</param></set><dialend>true</dialend></answer>
+            <answer tonode="0"> <text> Иди уже, лодырь. </text><set><param v="1">i1_find_guys</param><param v="2">musicman_i1</param></set><dialend>true</dialend></answer>
         </answers>
 	</node>
 </dialogue>

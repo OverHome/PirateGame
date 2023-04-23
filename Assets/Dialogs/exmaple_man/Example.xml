@@ -10,7 +10,7 @@
     <node> <!-- 1 -->
         <npctext>Принято, старина. Поднимайся на корабль, сейчас отшвартую вас. </npctext>
 		<answers>
-            <answer tonode="0"> <text>Хорошо. </text> <dialend>true</dialend> </answer>
+            <answer tonode="0"> <text>Хорошо.</text> <set><param v="1">Exit1</param></set> <dialend>true</dialend> </answer>
         </answers>
     </node>
     <node><!-- 2 -->
