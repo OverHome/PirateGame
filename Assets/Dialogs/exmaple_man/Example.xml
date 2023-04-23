@@ -2,7 +2,7 @@
     <node>
         <npctext>Здравствуй, капитан! </npctext>
         <answers>
-            <answer tonode = "1"> <text>Отплываем. </text><need><param v="1">i1_find_guys</param></need></answer>
+            <answer tonode = "1"> <text>Отплываем. </text><need><param v="1">i1_find_guys</param><set><param v="1">end_island1_ach</param></set></need></answer>
             <answer tonode = "2"> <text>Есть какие-то новости? </text></answer>
 			<answer tonode = "3"> <text>А ты чего такой грустный</text><need><param v="1">example_1</param></need></answer>
         </answers>
@@ -10,7 +10,7 @@
     <node> <!-- 1 -->
         <npctext>Принято, старина. Поднимайся на корабль, сейчас отшвартую вас. </npctext>
 		<answers>
-            <answer tonode="0"> <text>Хорошо. </text> <dialend>true</dialend> </answer>
+            <answer tonode="0"> <text>Хорошо.</text> <set><param v="1">Exit1</param></set> <dialend>true</dialend> </answer>
         </answers>
     </node>
     <node><!-- 2 -->
@@ -28,7 +28,7 @@
 	<node><!-- 4 -->
         <npctext>Отблагодарить? Хм... У меня есть немного, но я слышал как скрепит ваш штурвал. Я бы мог смазать крепления и привести его в чуть более надлежащий вид. </npctext>
         <answers>
-            <answer tonode="0"> <text>Договорились, постараюсь что нибудь придумать. </text><set><param v="1">Svartovoi_1</param></set><dialend>true</dialend></answer>
+            <answer tonode="0"> <text>Договорились, постараюсь что нибудь придумать. </text><set><param v = "1">find_secret_quest</param><param v="1">Svartovoi_1</param></set><dialend>true</dialend></answer>
 			<answer tonode="0"> <text>Не, не интересное предложение. Бывай, швартовой.</text><set><param v="2">example_1</param></set><dialend>true</dialend></answer>
         </answers>
     </node>

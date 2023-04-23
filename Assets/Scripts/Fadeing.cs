@@ -7,17 +7,16 @@ public class Fadeing : MonoBehaviour
 {
     private Animator _animation;
     private bool isFadeing;
-    private GoInOut _go;
-    
+    private IFeading _go;
+
     void Start()
     {
         _animation = GetComponent<Animator>();
         isFadeing = _animation.GetBool("fade");
         gameObject.SetActive(false);
-        
     }
 
-    public void FadeIn(GoInOut goInOut)
+    public void FadeIn(IFeading goInOut)
     {
         if (isFadeing) return;
         _go = goInOut;
@@ -25,7 +24,7 @@ public class Fadeing : MonoBehaviour
         isFadeing = !isFadeing;
         _animation.SetBool("fade", isFadeing);
     }
-    
+
     public void FadeOut()
     {
         if (!isFadeing) return;

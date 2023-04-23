@@ -2,7 +2,7 @@
     <node>
         <npctext>Во тьме ночной, при свете дня...~\nвсе не идет рифма у меня! Чтож такое!</npctext>
         <answers>
-            <answer tonode="0"> <text> ... </text><set><param v="2">musicman_i1</param></set><dialend>true</dialend></answer>
+            <answer tonode="0"> <text> ... </text><dialend>true</dialend></answer>
         </answers>
 	</node>
 </dialogue>

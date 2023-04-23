@@ -8,13 +8,13 @@
     <node>
         <npctext>Прошу простить мою грубость. Но вынужден сообщить, что моя муза покинула меня, а по сему Я буду ждать ее возвращения здесь, средь ветров и ласкового солнца... </npctext>
 		<answers>
-            <answer tonode="2"> <text>Ты должен вернуться на корабль, мы без тебя отплыть не можем! </text></answer>
+            <answer tonode="2"> <text>Ты должен вернуться на корабль, мы без тебя отплыть не можем! Вся команда тебя ждёт! </text></answer>
         </answers>
     </node>
 	<node>
-        <npctext>Это глупость, что девчока,~\nНа фрегате не к добру...~\n А как бы дальше сказать-то...</npctext>
+        <npctext>Вся команда... Ладно уж, сейчас спущусь.</npctext>
 		<answers>
-            <answer tonode="0"> <text>Еще и игнорирует! Надо найти чем еще в тебя кинуть.</text><set><param v="1">musicman_i1</param></set><dialend>true</dialend></answer>
+            <answer tonode="0"> <text>...</text><set><param v="1">musicman_i1</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>

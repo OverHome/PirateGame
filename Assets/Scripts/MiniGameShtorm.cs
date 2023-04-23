@@ -11,14 +11,16 @@ public class MiniGameShtorm: MonoBehaviour
     [SerializeField] public GameObject Helm;
     [SerializeField] public GameObject Arrow;
     [SerializeField] public List<Transform> BezierPoints;
+    [SerializeField] public GameObject Ship;
+    [SerializeField] public Transform PointToShip;
     [Range(0, 1)][SerializeField] public float ArrowPos;
     [SerializeField] public int Spead = 2;
     [SerializeField] public int ResistSpead = 1;
     [SerializeField] public int Health = 1000;
     [SerializeField] public int Damage = 1;
     [SerializeField] public int Assumption = 5;
-    [SerializeField] public TextMeshProUGUI PositionText;
     [SerializeField] public TextMeshProUGUI HealthText;
+    [SerializeField] private Fadeing _fadeing;
 
     private float timeBeforSwitch;
     private bool IsMove;
@@ -31,6 +33,7 @@ public class MiniGameShtorm: MonoBehaviour
     private float neadAngle;
     private float NextArrowPos;
     private Random random;
+    private int GameOver;
 
     private void Start()
     {
@@ -38,12 +41,15 @@ public class MiniGameShtorm: MonoBehaviour
         neadAngle = 0;
         NextArrowPos = 0;
         nextResDirection = 1;
+        GameOver = 0;
         SetEvent(5);
         SetResDir(2);
     }
 
     private void Update()
     {
+        Ship.transform.position = Vector2.MoveTowards(Ship.transform.position, new Vector2(PointToShip.transform.position.x, PointToShip.transform.position.y), Time.deltaTime * 3f);
+        CheckGameStatus();
         GetInput();
         timeBeforSwitch -= Time.deltaTime;
         changeResDirTime -= Time.deltaTime;
@@ -51,8 +57,27 @@ public class MiniGameShtorm: MonoBehaviour
         resDirection = Mathf.Lerp(resDirection, nextResDirection, Time.deltaTime*1);
         neadAngle = GenAngle(ArrowPos);
         SetArrowPosition();
-        print(resDirection);
-        print(nextResDirection);
+    }
+
+    private void CheckGameStatus()
+    {
+        if (GameOver == 0)
+        {
+            if (Health < 0)
+            {
+                GameOver = 2;
+                PlayerPrefs.SetInt("GameOverShtorm", 1);
+                PlayerPrefs.SetInt("GameOverShtormStatus", GameOver);
+                
+            }
+            if(Math.Abs(Ship.transform.position.x - PointToShip.transform.position.x) < 0.03)
+            {
+                GameOver = 1;
+                PlayerPrefs.SetInt("GameOverShtorm", 1);
+                PlayerPrefs.SetInt("GameOverShtormStatus", GameOver);
+            }
+            
+        }
     }
     
     private void GetInput()
@@ -87,13 +112,17 @@ public class MiniGameShtorm: MonoBehaviour
 
     private void FixedUpdate()
     {
-        helmRotation = GetRotation();
-        Resistance();
-        RotateHelm();
-        TakeDamage();
-        SwitchEvent();
-        ChangeResDir();
+        if (GameOver == 0)
+        {
+            helmRotation = GetRotation();
+            Resistance();
+            RotateHelm();
+            TakeDamage();
+            SwitchEvent();
+            ChangeResDir();
+        }  
     }
+        
 
     private void SetArrowPosition()
     {
@@ -194,4 +223,5 @@ public class MiniGameShtorm: MonoBehaviour
     {
         return random.NextDouble() * (maximum - minimum) + minimum;
     }
+    
 }

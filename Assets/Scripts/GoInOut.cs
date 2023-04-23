@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class GoInOut : MonoBehaviour, IPointerClickHandler
+public class GoInOut : MonoBehaviour, IPointerClickHandler, IFeading
 {
     private Kapitan _kapitan;
     private bool _wait;

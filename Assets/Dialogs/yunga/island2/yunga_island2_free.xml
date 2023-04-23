@@ -15,7 +15,7 @@
 	<node> <!-- 2 -->
         <npctext>Да, спасибо за беспокойство...</npctext>
         <answers>
-            <answer tonode = "3"> <text>Не переживай, все когда то были неопытны.</text></answer>
+            <answer tonode = "3"> <text>Не переживай, все когда то были неопытны.</text><need><param v="0">bad_answer</param></need></answer>
 			<answer tonode = "3"> <text>Мы скоро отплываем. Будь готов.</text></answer>
         </answers>
 	</node>
@@ -27,14 +27,14 @@
         </answers>
 	</node>
 	<node>
-        <npctext>Пока мы убегали, я успел заглянуть в тот храм снова, но в этот раз я перепрыгнул ловушку. Я смог забрать статуэтку!</npctext>
+        <npctext>Пока мы убегали, я успел заглянуть в тот храм снова, но в этот раз я перепрыгнул ловушку. Я смог забрать скипетр!</npctext>
         <answers>
             <answer tonode = "5"> <text>Джим, нужно быть осторожнее.</text></answer>
 			<answer tonode = "5"> <text>Нашел ты время конечно, но молодец.</text></answer>
         </answers>
 	</node>
 	<node>
-        <npctext>Прошу простить... Но заберите ее в благодарность.</npctext>
+        <npctext>Прошу простить... Но вы выйграли нам время, отвечая на вопросы, так что вы ее заслужили больше меня. Заберите ее в благодарность.</npctext>
         <answers>
             <answer tonode = "0"> <text>Хорошо, спасибо.</text><set><param v="2">get_statue</param><param v="1">yunga_i2_1</param></set><dialend>true</dialend></answer>
         </answers>
