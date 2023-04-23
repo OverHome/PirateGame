@@ -2,14 +2,13 @@
     <node>
         <npctext>...</npctext>
         <answers>
-            <answer tonode="1"> <text>Чего ты хочешь? </text></answer>
-            <answer tonode="1"> <text>Тоже полгумиться пришла?</text></answer>
+            <answer tonode="1"> <text>Спасибо за освобождение! </text></answer>
+            <answer tonode="1"> <text>Кто ты?</text></answer>
         </answers>
     </node>
 	<node>
-        <npctext>*амазонка достаёт небольшую шпильку из волос и взламывает замок*</npctext>
+        <npctext>Бегите!</npctext>
         <answers>
-            <answer tonode="0"> <text>О! </text><set><param v="1">save</param></set><dialend>true</dialend></answer>
             <answer tonode="0"> <text>...</text><set><param v="1">save</param></set><dialend>true</dialend></answer>
         </answers>
     </node>

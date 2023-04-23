@@ -14,7 +14,7 @@
 	<node> <!-- 2 -->
         <npctext> Знаю! Он был рядом, когда я решил прилечь у пальмы.\nОн говорил что-то про поиски вдохновения.\nМожет он на верху? </npctext>
         <answers>
-            <answer tonode="0"> <text> Отправляйся на корабль. </text> <set><param v="2">Shegol</param></set><dialend>true</dialend></answer>
+            <answer tonode="0"> <text> Отправляйся на корабль. А я сейчас найду камень, которым можно его с дерева спустить. </text> <set><param v="2">Shegol</param></set><dialend>true</dialend></answer>
         </answers>
     </node>
 </dialogue>

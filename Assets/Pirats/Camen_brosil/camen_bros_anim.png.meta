@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1fc6e06e38e48a945bf61188d0ac7a36
+guid: 9a0882e3330a25e498b2d911bcada7a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,259 +129,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: camen_bros_anim_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 880
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b143ea8650df0c45802d28f2aea671e
-      internalID: -1003332754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 800
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0709e76d7b04924685c70b5e67d36cd
-      internalID: -1221955448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 720
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d67c103a4daccd04d83dee8696cd8f99
-      internalID: -244830485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 640
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0775cb0f646d4e44aa23d028522f487
-      internalID: -854213422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 560
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d53b62ff72f17c54ebce59fe15be7188
-      internalID: -217478233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 480
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a12f22d6eae834f4683f94b32fa41ed3
-      internalID: 1795862627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 400
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b582b1d177456748a2ef15ea40baf86
-      internalID: 450550486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cbc8315e2b0ec543857fe8951cc8710
-      internalID: 384315424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 240
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf29e282149f71b448d46e7203086182
-      internalID: -396558191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bab15196effb5f54586508be0ae8a874
-      internalID: 931339620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 80
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84752729856909647bb77121f42128c7
-      internalID: 1856379524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: camen_bros_anim_11
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 78
-        height: 80
-      alignment: 8
-      pivot: {x: 1, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6f798ece92b79c4fa5ee135d4bd3f9b
-      internalID: 276096523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -392,19 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      camen_bros_anim_0: -1003332754
-      camen_bros_anim_1: -1221955448
-      camen_bros_anim_10: 1856379524
-      camen_bros_anim_11: 276096523
-      camen_bros_anim_2: -244830485
-      camen_bros_anim_3: -854213422
-      camen_bros_anim_4: -217478233
-      camen_bros_anim_5: 1795862627
-      camen_bros_anim_6: 450550486
-      camen_bros_anim_7: 384315424
-      camen_bros_anim_8: -396558191
-      camen_bros_anim_9: 931339620
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
