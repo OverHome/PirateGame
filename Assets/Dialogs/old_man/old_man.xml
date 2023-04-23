@@ -15,7 +15,7 @@
     <node> <!-- 2 -->
         <npctext>Не хочешь - не надо! Будешь потом как тот тип в красном. </npctext>
         <answers>
-            <answer tonode="0"> <text>Бывай, старый. </text> <set><param v="1">oldMan1</param><param v="2">NoTabak</param></set> <dialend>true</dialend> </answer>
+            <answer tonode="0"> <text>Бывай, старый. </text> <set><param v="1">oldMan1</param><param v="2">NoTabak</param><param v ="2">lair</param></set><dialend>true</dialend> </answer>
         </answers>
     </node>
 	<node> <!-- 3 --> 
