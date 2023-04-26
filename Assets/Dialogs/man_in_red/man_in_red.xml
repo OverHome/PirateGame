@@ -28,7 +28,7 @@
         </answers>
 	</node>
 	<node> <!-- 4 -->
-		<npctext>АААААААААААА! Быстрее!</npctext>
+		<npctext>Быстрее!</npctext>
         <answers>
 		<answer tonode="6"> <text>Внутри находятся волосы сирены, пропитанные каким-то водорослями. </text><need><param v="1">NoTabak</param></need></answer>
 		<answer tonode="5"> <text>Внутри находится обычный табак. </text><set><param v="1">lair</param></set><need><param v="1">NoTabak</param></need></answer>

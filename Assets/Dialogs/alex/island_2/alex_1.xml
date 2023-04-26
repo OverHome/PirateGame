@@ -2,7 +2,7 @@
     <node>
         <npctext>М-м-м-м м-м!</npctext>
         <answers>
-            <answer tonode = "1"> <text>Где ты все это время была?</text></answer>
+            <answer tonode = "1"> <text>Где ты была все это время?</text></answer>
 			<answer tonode = "0"> <text>Нет, с тобой нормально не поговоришь.</text><dialend>true</dialend></answer>
         </answers>
 	</node>
